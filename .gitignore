@@ -18,6 +18,5 @@ pip-*
 .coverage
 .tox
 nosetests.xml
-*.mo
 env
 *.db
