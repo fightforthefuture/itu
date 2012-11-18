@@ -21,3 +21,12 @@ SITE_ID = 3
 INSTALLED_APPS = list(INSTALLED_APPS) + [
     'gunicorn',
 ]
+
+# Staticfiles settings
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+STATICFILES_STORAGE = DEFAULT_FILE_STORAGE
+AWS_ACCESS_KEY_ID = 'AKIAJ26VA4NJKAH4DQSQ'
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY', '')
+AWS_STORAGE_BUCKET_NAME = 'fftf.itu'
+AWS_S3_CUSTOM_DOMAIN = "s3.amazonaws.com/fftf.itu"
+STATIC_URL = 'https://s3.amazonaws.com/fftf.itu/'

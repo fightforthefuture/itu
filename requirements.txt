@@ -8,3 +8,5 @@ Pillow==1.7.7
 pylibmc==1.2.3
 django-heroku-postgresify==0.2
 django-heroku-memcacheify==0.3
+boto==2.6.0
+django-storages==1.1.5
