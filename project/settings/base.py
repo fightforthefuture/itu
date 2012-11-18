@@ -3,6 +3,9 @@ import os
 from settings import APP_DIR
 
 
+gettext = lambda s: s
+
+
 # Path settings
 STATIC_ROOT = ''
 STATIC_URL = '/static/'
@@ -31,8 +34,14 @@ MANAGERS = ADMINS
 TIME_ZONE = 'America/New_York'
 USE_I18N = True
 USE_L10N = False
-LANGUAGE_CODE = 'en-us'
-
+LANGUAGE_CODE = 'en'
+LANGUAGES = (
+    ('en', gettext('English')),
+    ('is', gettext('Icelandic')),
+)
+LOCALE_PATHS = (
+    os.path.join(APP_DIR, 'apps', 'itu', 'locale',),
+)
 
 # Apps, classes, processors, and loaders
 STATICFILES_FINDERS = (
@@ -46,6 +55,7 @@ TEMPLATE_LOADERS = (
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -59,6 +69,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'south',
+    'itu',
 )
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
@@ -68,6 +79,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     'django.core.context_processors.request',
     'django.contrib.messages.context_processors.messages',
+    'context_processors.domain',
 )
 
 

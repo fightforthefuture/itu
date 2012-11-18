@@ -22,6 +22,8 @@ INSTALLED_APPS = list(INSTALLED_APPS) + [
     'gunicorn',
 ]
 
+DOMAIN = 'https://itu-production.herokuapp.com'
+
 # Staticfiles settings
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 STATICFILES_STORAGE = DEFAULT_FILE_STORAGE

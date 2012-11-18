@@ -20,3 +20,5 @@ DEBUG_TOOLBAR_CONFIG = {
 INSTALLED_APPS = list(INSTALLED_APPS) + [
     'debug_toolbar',
 ]
+
+DOMAIN = 'http://localhost:8000'

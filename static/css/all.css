@@ -1,0 +1,27 @@
+body{
+    padding: 20px;
+}
+
+h1{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 24px 0 12px;
+}
+    h1:first-child{
+        margin-top: 0;
+    }
+
+h2{
+    font-size: 15px;
+    font-weight: bold;
+    margin: 24px 0 12px;
+}
+
+p{
+    margin: 18px 0;
+    font-size: 13px;
+    line-height: 1.31;
+}
+form{
+    margin: 12px 0
+}

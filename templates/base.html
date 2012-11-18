@@ -1,12 +1,17 @@
+{% load i18n %}
 {% load static %}
+{% load url from future %}
 
 <!DOCTYPE html>
 <html>
 
+    {% comment %}Translators: Song Title{% endcomment %}
+    {% trans "Starálfur" as song_title %}
+
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-        <title>{% block title %}ITU{% endblock title %}</title>
+        <title>{% block title %}{{ song_title }}{% endblock title %}</title>
         <link rel="icon" href=""/>
         <link rel="stylesheet" href="{% static 'css/reset.css' %}" media="all" />
         <link rel="stylesheet" href="{% static 'css/all.css' %}" media="all" />
@@ -17,18 +22,58 @@
     <body role="document">
 
         <header role="banner">
-            <h1>ITU</h1>
+            {% block header %}{% endblock header %}
         </header>
 
         <div id="main" role="main">
 
             {% block main %}
 
+                {% comment %}Translators: First verse{% endcomment %}
+                <p>{% blocktrans %}Blue night over the sky<br />Blue night over me<br />Disappearing out the window<br />With my hands<br />Hidden under my cheeks<br />I think about my day<br />Today and yesterday{% endblocktrans %}</p>
+
+                {% comment %}Translators: Second verse{% endcomment %}
+                <p>{% blocktrans %}I put on my blue pajamas<br />Go straight to bed<br />I caress the soft covers<br />Close my eyes<br />I hide my head under the sheets{% endblocktrans %}</p>
+
+                {% comment %}Translators: third verse{% endcomment %}
+                <p>{% blocktrans %}A little elf stares at me<br />Turns me in, but doesn't stir<br />From his place – himself<br />A staring elf{% endblocktrans %}</p>
+
+                {% comment %}Translators: Fourth verse{% endcomment %}
+                <p>{% blocktrans %}I open my eyes<br />The crusts come off<br />I stretch myself and check (If I haven't)<br />Once again and everything is okay<br />Still there is something missing<br />Like all the walls{% endblocktrans %}</p>
+
+                {% comment %}Translators: Bridge to close{% endcomment %}
+                <p>{% blocktrans %}(A little elf stares at me)<br />(Turns me in){% endblocktrans %}</p>
+
+                {% comment %}Translators: Close{% endcomment %}
+                <p>{% blocktrans %}From his place – himself<br />I am...{% endblocktrans %}</p>
+
+                <figure>
+                    <iframe width="250" height="59" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F7693183&amp;show_artwork=false"></iframe>
+                </figure>
+
             {% endblock main %}
 
         </div>
 
-        <footer role="contentinfo"></footer>
+        <footer role="contentinfo">
+
+            <h2>Change language:</h2>
+
+            <form action="{% url 'set_language' %}" method="post">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="/" />
+                <select name="language">
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    {% for language in languages %}
+                        <option {% if request.LANGUAGE_CODE == language.code %}selected="selected" {% endif %}value="{{ language.code }}">{{ language.name_local }} ({{ language.code }})</option>
+                    {% endfor %}
+                </select>
+                <input type="submit" value="Go" />
+            </form>
+
+            <p>Share this (in this language): {{ DOMAIN }}{% url 'lyrics' %}</p>
+
+        </footer>
 
         <script src="{% static 'js/jquery.js' %}"></script>
         <script src="{% static 'js/script.js' %}"></script>

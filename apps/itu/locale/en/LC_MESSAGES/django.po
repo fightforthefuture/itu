@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-18 06:06-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Translators: Song Title
+#: templates/lyrics.html:6
+msgid "Starálfur"
+msgstr ""
+
+#. Translators: First verse
+#: templates/lyrics.html:17
+msgid ""
+"Blue night over the sky<br />Blue night over me<br />Disappearing out the "
+"window<br />With my hands<br />Hidden under my cheeks<br />I think about my "
+"day<br />Today and yesterday"
+msgstr ""
+
+#. Translators: Second verse
+#: templates/lyrics.html:20
+msgid ""
+"I put on my blue pajamas<br />Go straight to bed<br />I caress the soft "
+"covers<br />Close my eyes<br />I hide my head under the sheets"
+msgstr ""
+
+#. Translators: third verse
+#: templates/lyrics.html:23
+msgid ""
+"A little elf stares at me<br />Turns me in, but doesn't stir<br />From his "
+"place – himself<br />A staring elf"
+msgstr ""
+
+#. Translators: Fourth verse
+#: templates/lyrics.html:26
+msgid ""
+"I open my eyes<br />The crusts come off<br />I stretch myself and check (If "
+"I haven't)<br />Once again and everything is okay<br />Still there is "
+"something missing<br />Like all the walls"
+msgstr ""
+
+#. Translators: Bridge to close
+#: templates/lyrics.html:29
+msgid "(A little elf stares at me)<br />(Turns me in)"
+msgstr ""
+
+#. Translators: Close
+#: templates/lyrics.html:32
+msgid "From his place – himself<br />I am..."
+msgstr ""
