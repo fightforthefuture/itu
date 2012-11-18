@@ -73,6 +73,12 @@
 
             <p>Share this (in this language): {{ DOMAIN }}{% url 'lyrics' %}</p>
 
+            <h2>You are located in:</h2>
+
+            <p>City: {{ session.city }}</p>
+            <p>Region: {{ session.region_name }}</p>
+            <p>Country: {{ session.country_name }}</p>
+
         </footer>
 
         <script src="{% static 'js/jquery.js' %}"></script>

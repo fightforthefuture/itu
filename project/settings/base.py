@@ -42,6 +42,12 @@ LANGUAGES = (
 LOCALE_PATHS = (
     os.path.join(APP_DIR, 'apps', 'itu', 'locale',),
 )
+GEOIP_DATA = os.path.join(APP_DIR, 'data', 'GeoLiteCity.dat')
+GEOIP_SESSION_FIELDS = [
+    'country_name',
+    'region_name',
+    'city',
+]
 
 # Apps, classes, processors, and loaders
 STATICFILES_FINDERS = (
@@ -59,6 +65,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'ip2geo.middleware.CityMiddleware',
 )
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -70,6 +77,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'south',
     'itu',
+    'ip2geo',
 )
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
@@ -80,6 +88,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
     'django.contrib.messages.context_processors.messages',
     'context_processors.domain',
+    'ip2geo.context_processors.add_session',
 )
 
 
