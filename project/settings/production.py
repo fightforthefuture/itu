@@ -16,8 +16,6 @@ DEBUG_TOOLBAR_CONFIG = {
     'SHOW_TOOLBAR_CALLBACK': lambda: False,
 }
 
-SITE_ID = 3
-
 INSTALLED_APPS = list(INSTALLED_APPS) + [
     'gunicorn',
 ]
