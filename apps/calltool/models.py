@@ -5,7 +5,7 @@ from django_countries.countries import COUNTRIES
 
 class PhoneNumber(models.Model):
     country = models.CharField(max_length=8, choices=COUNTRIES)
-    number = models.IntegerField(max_length=32)
+    number = models.CharField(max_length=32)
     name = models.CharField('Name and title', max_length=128)
     extension = models.CharField(max_length=32, blank=True)
 

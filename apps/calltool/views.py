@@ -29,7 +29,7 @@ class CallInfoView(TemplateView):
         response.say((
             'Connecting you to your ITU representative, %s. Please hold.'
         ) % phone_number.name)
-        response.dial(number=str(phone_number.number))
+        response.dial(number=phone_number.number)
         return mark_safe(str(response))
 
     def render_to_response(self, context, **kwargs):
