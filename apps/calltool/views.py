@@ -1,5 +1,7 @@
 from django.conf import settings
 from django.core.urlresolvers import reverse
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import FormView
 from django.utils.safestring import mark_safe
@@ -38,6 +40,10 @@ class CallInfoView(TemplateView):
             **kwargs
         )
 
+    @method_decorator(csrf_exempt)
+    def dispatch(self, *args, **kwargs):
+        return super(CallInfoView, self).dispatch(*args, **kwargs)
+
 
 class CallToolView(FormView):
     template_name = 'calltool.html'
@@ -49,7 +55,7 @@ class CallToolView(FormView):
         call = client.calls.create(
             to=form_data['number'],
             from_='6122463812',
-            url=settings.DOMAIN + reverse('twiml', kwargs={
+            url='https://itu-staging.herokuapp.com' + reverse('twiml', kwargs={
                 'country': form_data['country']
             }),
         )
