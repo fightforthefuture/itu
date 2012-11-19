@@ -53,6 +53,4 @@ class CallToolView(FormView):
                 'country': form_data['country']
             }),
         )
-        import pdb
-        pdb.set_trace()
         return super(CallToolView, self).form_valid(form)
