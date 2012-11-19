@@ -78,6 +78,7 @@ INSTALLED_APPS = (
     'south',
     'itu',
     'ip2geo',
+    'calltool',
 )
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
@@ -97,3 +98,7 @@ SITE_ID = 1
 SECRET_KEY = 'dskba^j4%zysn*d-+yh!w!2_vd938d2pia0dk0v40yie^t!tc$'
 ROOT_URLCONF = 'project.urls'
 INTERNAL_IPS = ('127.0.0.1',)
+
+# Twilio settings
+TWILIO_ACCOUNT = 'AC1b36b0880e7530680b7297fccccdab7e'
+TWILIO_AUTH_TOKEN = os.environ.get('TWILIO_AUTH_TOKEN')
