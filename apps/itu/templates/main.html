@@ -28,7 +28,9 @@
 
     <body role="document">
 
-
+	    <a id="tag" href="http://fightforthefuture.org"  target="blank"></a>
+	    <a id="cr_tag" href="http://www.thecenterforrights.org"  target="blank"></a>
+		
 	{% if debug %}<form action="{% url 'set_language' %}" method="post" id="languageselect">
        <h4>Change language:</h4>
             {% csrf_token %}
@@ -77,7 +79,7 @@
                 <h1>{% trans "On Dec 3: Stop the Internet Coup" %}</h1>
                 {% comment %}Translators: Introductory text{% endcomment %}
                 {% blocktrans %}
-                    <p>Think of all the terrible things governments do to the Internet. The US destroyed Megaupload, Russia jailed activists over a Youtube video, and China monitors Internet users' every move-- even hacking activists outside its borders.</p>
+                    <p>Think of all the terrible things governments do to the Internet. The US destroyed Megaupload, Russia jailed activists over a YouTube video, and China monitors Internet users' every move-- even hacking activists outside its borders.</p>
                     <p>Now imagine if a panel of governments, giant corporations, and dictatorships had absolute power over the entire Internet, deciding in secret what you can see &amp; do online.</p>
                     <p>When the ITU meets December 3rd, they'll decide on this.<br />Only a global outcry can stop it.</p>
                 {% endblocktrans %}
@@ -384,6 +386,15 @@
                     }
                 )
             </script>
+			<ul class="soc">
+				<li class="fb"><a href="http://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwhatistheitu.org">Share on Facebook</a></li>
+				<li class="tw"><a href="http://twitter.com/share?original_referer=https%3A%2F%2Fwww.whatistheitu.org&source=tweetbutton&text=What%20is%20the%20%23ITU%3F%20What%20does%20it%20mean%20for%20the%20future%20of%20the%20Internet%3F&hashtags=WCIT,ITUVideo">Share on Twitter</a></li>
+				<li class="g"><a  href="https://plus.google.com/share?url=https://www.whatistheitu.org/" onclick="javascript:window.open(this.href,
+				'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">Share on Google+</a></li>
+			</ul>
+					
+					
+			<p class="btw">We made this video with our friends at <a href="http://accessnow.org">Access</a> to make sure everyone knows about the ITU and the threat it poses.</p>
             <ul class="linkage outside">
                 <li class="main">{% trans "Further Reading" %}</li>
                 <li><a href="http://allafrica.com/stories/201210030354.html?page=2" class="wa" target="_blank">{% trans "WallAfrica" %}</a></li>
@@ -419,6 +430,8 @@
 			<li><a href="http://www.universalsubtitles.org/en/videos/YAfuLWFp5zS4/info/how-the-itu-could-put-the-internet-behind-closed-doors/">Translate the video</a></li>
 
 			</ol>
+			
+			<p class="btw two">A project of <a href="http://www.fightforthefuture.org/">Fight for the Future</a> and <a href="http://www.thecenterforrights.org/">Center for Rights</a>. No copyright intended.</p>
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
