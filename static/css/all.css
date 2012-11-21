@@ -321,12 +321,44 @@ height: 340px;
 #signupmodal-lightbox ul li {float: left;}
 #signupmodal-lightbox ul {margin-left: 100px;}
 
-ol.todo {margin-left: 200px; margin-top: 20px;}
+ol.todo {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px; /* border radius */
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box; /* prevents bg color from leaking outside the border */
+	background-color: #fff; /* layer fill content */
+	-moz-box-shadow: 0 5px 10px rgba(0,0,0,.53); /* drop shadow */
+	-webkit-box-shadow: 0 5px 10px rgba(0,0,0,.53); /* drop shadow */
+	box-shadow: 0 5px 10px rgba(0,0,0,.53); /* drop shadow */
+	float: right;
+	padding: 60px;
+	width: 400px;
+	margin-bottom: 40px;
+	margin-top: 50px;
+}
 ol.todo li {
-	list-style-type: decimal;
-	margin-bottom: 10px;
-	font-size: 115%;
-	margin-left: 10px;
+	margin-bottom: 20px;
+	font-weight: bold;
+	font-size: 20px;
+	background: url(../img/ordered.png) no-repeat;
+	background-position: 5px 7px;
+	padding-left: 13px;
+	padding-top: 2px;
+	list-style: decimal inside;
+	min-height: 32px;
+	line-height: 2;
+}
+
+h2.moar {
+	display: block;
+	float: left;
+	width: 300px;
+	height: 93px;
+	text-indent: -9999px;
+	background: url(../img/moar.png) no-repeat;
+	margin-top: 150px;
 }
 
 #languageselect {
