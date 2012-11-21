@@ -18,7 +18,7 @@
 		
 		<meta property="og:title" content="Stop the ITU's Internet Coup - Don't give dictators power over the Net http://internetcoup.org/" />
 		<meta property="og:description" content="On December 3rd, the ITU could give a panel of governments and dictatorships absolute power over the global Internet. Help us stop them." />
-		<meta property="og:image" content="" />
+		<meta property="og:image" content="{% static 'img/fb-share.png' %}" />
 		<meta property="og:url" content="http://www.internetcoup.org" />
 		<meta property="og:type" content="article" />
 		<meta property="fb:admins" content="678090273"/>
@@ -56,6 +56,8 @@
             </div>
         </div>
 
+
+		<div >
         <div class="header">
             <div class="header_wrap">
                 {% comment %}Translators: Header{% endcomment %}
@@ -64,7 +66,7 @@
                 {% blocktrans %}
                     <p>Think of all the terrible things governments do to the Internet. The US destroyed Megaupload, Russia jailed activists over a Youtube video, and China monitors Internet users' every move-- even hacking activists outside its borders.</p>
                     <p>Now imagine if a panel of governments, giant corporations, and dictatorships had absolute power over the entire Internet, deciding in secret what you can see &amp; do online.</p>
-                    <p>When the ITU meets December 3rd, this could happen. Only a global outcry can stop it.</p>
+                    <p>When the ITU meets December 3rd, they'll decide on this. Only a global outcry can stop it.</p>
                 {% endblocktrans %}
                 <div class="superfluous_globe"></div>
             </div>
@@ -393,7 +395,7 @@
 			
 			<ol class="todo">
 
-			<li>Share this page on: Facebook / Twitter / Google+</li>
+			<li>Share this page on: <a href='http://facebook.com/sharer/sharer.php?u=http%3A%2F%2Finternetcoup.org'>Facebook</a> / <a href="http://twitter.com/share?original_referer=http%3A%2F%2Fwww.internetcoup.org&source=tweetbutton&text=Stop%20the%20%23ITU's%20Internet%20Coup%20-%20Don't%20give%20dictators%20power%20over%20the%20Net">Twitter</a> / <a href='https://plus.google.com/share?url=https://www.internetcoup.org/'>Google+</a></li>
 
 			<li>{% trans "Plan an event in your country" %}</li>
 
@@ -415,19 +417,7 @@
 		<script>$("select").find("option:contains('{{ session.country_name }}')").attr('selected',true);</script>
         <div style="clear: left;">
 
-            <h2>Change language:</h2>
-
-            <form action="{% url 'set_language' %}" method="post">
-                {% csrf_token %}
-                <input name="next" type="hidden" value="/" />
-                <select name="language">
-                    {% get_language_info_list for LANGUAGES as languages %}
-                    {% for language in languages %}
-                        <option {% if request.LANGUAGE_CODE == language.code %}selected="selected" {% endif %}value="{{ language.code }}">{{ language.name_local }} ({{ language.code }})</option>
-                    {% endfor %}
-                </select>
-                <input type="submit" value="Go" />
-            </form>
+ 
 
         </div>
 		{% comment %}
