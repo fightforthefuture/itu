@@ -179,6 +179,7 @@ a:hover {
 }
 
 .focus p.disclosure, .focus label {color: #434343;}
+
 h2 {
     text-align: center;
     color: #000; /* text color */
@@ -186,6 +187,8 @@ h2 {
     font-size: 23px;
     font-weight: bold;
     margin: 50px auto auto auto;
+	clear: both;
+	display: block;
 }
 
 p.thoughtful {
@@ -318,3 +321,12 @@ height: 340px;
 #signupmodal-lightbox ul li {float: left;}
 #signupmodal-lightbox ul {margin-left: 100px;}
 
+ol.todo {margin-left: 200px; margin-top: 20px;}
+ol.todo li {
+	list-style-type: decimal;
+	margin-bottom: 10px;
+	font-size: 115%;
+
+	margin-left: 10px;
+	
+}

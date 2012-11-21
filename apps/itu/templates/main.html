@@ -379,6 +379,22 @@
                 <li><a target="_blank" href="http://wcitleaks.org">{% trans "WCITLeaks" %}</a></li>
                 <li><a target="_blank" href="http://www.internetsociety.org/wcit ">{% trans "Internet Society (ISOC) WCIT page" %}</a></li>
             </ul>
+			
+			<h2>{% trans "More ways to help" %}</h2>
+			
+			<ol class="todo">
+
+			<li>Share this page on: Facebook / Twitter / Google+</li>
+
+			<li>{% trans "Plan an event in your country" %}</li>
+
+			<li>{% trans "Join the <a href='http://internetdefenseleague.org'>Internet Defense League" %}</a></li>
+
+			<li>{% trans "<a href='https://www.transifex.com/projects/p/internetcoup/'>Translate this page</a>" %}</li>
+
+			<li><a href="http://www.universalsubtitles.org/en/videos/YAfuLWFp5zS4/info/how-the-itu-could-put-the-internet-behind-closed-doors/">Translate the video</a></li>
+
+			</ol>
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -411,7 +427,19 @@
             <p>Region: {{ session.region_name }}</p>
             <p>Country: {{ session.country_name }}</p>
 		{% endcomment %}
-       
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-26576645-14']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
     </body>
 
 </html>
