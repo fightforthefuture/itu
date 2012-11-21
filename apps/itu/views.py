@@ -1,10 +1,6 @@
 from django.conf import settings
 from django.utils.translation import check_for_language
-from django.views.generic.base import RedirectView, TemplateView
-
-
-class LyricsView(TemplateView):
-    template_name = 'lyrics.html'
+from django.views.generic.base import RedirectView
 
 
 class SetLanguageView(RedirectView):
