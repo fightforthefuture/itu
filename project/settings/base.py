@@ -37,7 +37,7 @@ USE_L10N = False
 LANGUAGE_CODE = 'en'
 LANGUAGES = (
     ('en', gettext('English')),
-    ('is', gettext('Icelandic')),
+    ('es', gettext('Spanish')),
 )
 LOCALE_PATHS = (
     os.path.join(APP_DIR, 'apps', 'itu', 'locale',),

@@ -1,0 +1,438 @@
+{% load i18n %}
+{% load static %}
+{% load url from future %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=320" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        {% comment %}Translators: Page Title{% endcomment %}
+        <title>{% trans "Stop the Internet Coup - don&#39;t give dictators power over the Net" %}</title>
+        <link rel="icon" type="image/png" href="http://fightforthefturue.org/fav.png" />
+        <link rel="stylesheet" href="{% static 'css/reset.css' %}" media="all" />
+        <link rel="stylesheet" href="{% static 'css/all.css' %}" media="all" />
+        <link rel="stylesheet" href="{% static 'css/screen.css' %}" media="screen" />
+        <link rel="stylesheet" href="{% static 'css/print.css' %}" media="print" />
+    </head>
+
+    <body role="document">
+
+        <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+        <div class="socialize" style="position: fixed; height: 350px; margin-left: 10px; margin-top: 10px; z-index: 99;">
+            <div id="fb-root"></div>
+            <script>
+                (function(d, s, id){
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if(d.getElementById(id)){
+                        return;
+                    }
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+            </script>
+            <script type="text/javascript">
+                var _sf_startpt=(new Date()).getTime()
+            </script>
+            <div id="shareitup" style="overflow: visible">
+                <div class="fb-like" data-href="{{ DOMAIN }}{% url 'main' %}" data-send="true" data-layout="box_count" data-width="150" data-show-faces="true" style="margin-bottom: 5px;"></div>
+                <br />
+                {% comment %}Translators: Twitter share text{% endcomment %}
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ DOMAIN }}{% url 'main' %}" data-text="{% trans "Stop the #ITU's Internet Coup - Don't give dictators power over the Net" %}" style="float: left; clear: both;">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
+        </div>
+
+        <div class="header">
+            <div class="header_wrap">
+                {% comment %}Translators: Header{% endcomment %}
+                <h1>{% trans "On Dec 3: Stop the Internet Coup" %}</h1>
+                {% comment %}Translators: Introductory text{% endcomment %}
+                {% blocktrans %}
+                    <p>Think of all the terrible things governments do to the Internet. The US destroyed Megaupload, Russia jailed activists over a Youtube video, and China monitors Internet users' every move-- even hacking activists outside its borders.</p>
+                    <p>Now imagine if a panel of governments, giant corporations, and dictatorships had absolute power over the entire Internet, deciding in secret what you can see &amp; do online.</p>
+                    <p>When the ITU meets December 3rd, this could happen. Only a global outcry can stop it.</p>
+                {% endblocktrans %}
+                <div class="superfluous_globe"></div>
+            </div>
+        </div>
+
+        <div class="focus">
+            {% comment %}Translators: Email form introduction{% endcomment %}
+            <p>{% trans "Join us on December 3rd, and tell your leaders right now: &ldquo;I don&#39;t trust the world&#39;s governments to run the global Internet. Don&#39;t give the ITU any more power.&rdquo;" %}</p>
+            <form action="https://nt.salsalabs.com/save" id="action" class="fftf">
+                <input type="hidden" name="object" value="supporter"/>
+                <input type="hidden" name="tag" value="dictatorshipday"/>
+                <input type="hidden" name="ip" id="signup_ip" />
+                <input type="hidden" name="user_agent" id="user_agent" />
+                <input type="hidden" id="trigger" name="email_trigger_KEYS" value="7" />
+                <input type="hidden" name="organization_KEY" value="501"/>
+                <input type="hidden" name="redirect" value="http://www.internetcoup.org/thanks"> 
+                <input id="id_email" type="email" name="Email" placeholder="Email" />
+                <input id="id_phone" type="tel" name="Phone" placeholder="Phone" />
+                <div class="fauxselect">
+                    <select id="country" name="Country">
+
+                        {% comment %}Translators: Default country selection text{% endcomment %}
+                        <option selected="selected">{% trans "Select Country" %}</option>
+
+                        <option value=""></option>
+                        <option value="AF" data-response="22">Afghanistan</option>
+                        <option value="AL" data-response="23">Albania</option>
+                        <option value="DZ" data-response="25">Algeria</option>
+                        <option value="AS">American Samoa</option>
+                        <option value="AD" data-response="26">Andorra</option>
+                        <option value="AO" data-response="27">Angola</option>
+                        <option value="AI">Anguilla</option>
+                        <option value="AG" data-response="28">Antigua and Barbuda</option>
+                        <option value="AR" data-response="29">Argentina</option>
+                        <option value="AM" data-response="30">Armenia</option>
+                        <option value="AW">Aruba</option>
+                        <option value="AU" data-response="31">Australia</option>
+                        <option value="AT" data-response="32">Austria</option>
+                        <option value="AZ" data-response="33">Azerbaijan</option>
+                        <option value="BS" data-response="34">Bahamas</option>
+                        <option value="BH" data-response="35">Bahrain</option>
+                        <option value="BD" data-response="36">Bangladesh</option>
+                        <option value="BB" data-response="37">Barbados</option>
+                        <option value="BY" data-response="38">Belarus</option>
+                        <option value="BE" data-response="39">Belgium</option>
+                        <option value="BZ" data-response="40">Belize</option>
+                        <option value="BJ" data-response="41">Benin</option>
+                        <option value="BM">Bermuda</option>
+                        <option value="BT" data-response="42">Bhutan</option>
+                        <option value="BO" data-response="43">Bolivia</option>
+                        <option value="BA" data-response="44">Bosnia and Herzegovina</option>
+                        <option value="BW" data-response="45">Botswana</option>
+                        <option value="BR" data-response="46">Brazil</option>
+                        <option value="VG">British Virgin Islands</option>
+                        <option value="IO">British Indian Ocean Territory</option>
+                        <option value="BN" data-response="47">Brunei</option>
+                        <option value="BG" data-response="48">Bulgaria</option>
+                        <option value="BF" data-response="49">Burkina Faso</option>
+                        <option value="BI" data-response="50">Burundi</option>
+                        <option value="KH" data-response="51">Cambodia</option>
+                        <option value="CM" data-response="52">Cameroon</option>
+                        <option value="CA" data-response="53">Canada</option>
+                        <option value="CV" data-response="54">Cape Verde</option>
+                        <option value="KY">Cayman Islands</option>
+                        <option value="CF" data-response="55">Central African Republic</option>
+                        <option value="TD" data-response="56">Chad</option>
+                        <option value="CL" data-response="57">Chile</option>
+                        <option value="CN" data-response="58">China</option>
+                        <option value="CX">Christmas Island</option>
+                        <option value="CO" data-response="59">Colombia</option>
+                        <option value="KM" data-response="60">Comoros Islands</option>
+                        <option value="CD" data-response="61">Congo, Democratic Republic of the</option>
+                        <option value="CG" data-response="61">Congo, Republic of the</option>
+                        <option value="CK">Cook Islands</option>
+                        <option value="CR" data-response="62">Costa Rica</option>
+                        <option value="CI" data-response="63">Cote D'ivoire</option>
+                        <option value="HR" data-response="64">Croatia</option>
+                        <option value="CU" data-response="65">Cuba</option>
+                        <option value="CY" data-response="66">Cyprus</option>
+                        <option value="CZ" data-response="67">Czech Republic</option>
+                        <option value="DK" data-response="70">Denmark</option>
+                        <option value="DJ" data-response="71">Djibouti</option>
+                        <option value="DM" data-response="72">Dominica</option>
+                        <option value="DO" data-response="73">Dominican Republic</option>
+                        <option value="TP">East Timor</option>
+                        <option value="EC" data-response="74">Ecuador</option>
+                        <option value="EG" data-response="75">Egypt</option>
+                        <option value="SV" data-response="76">El Salvador</option>
+                        <option value="GQ" data-response="77">Equatorial Guinea</option>
+                        <option value="ER" data-response="78">Eritrea</option>
+                        <option value="EE" data-response="79">Estonia</option>
+                        <option value="ET" data-response="80">Ethiopia</option>
+                        <option value="FK">Falkland Islands (Malvinas)</option>
+                        <option value="FO">Faroe Islands</option>
+                        <option value="FJ" data-response="81">Fiji</option>
+                        <option value="FI" data-response="82">Finland</option>
+                        <option value="FR" data-response="83">France</option>
+                        <option value="GF">French Guiana</option>
+                        <option value="PF">French Polynesia</option>
+                        <option value="TF">French Southern Territories</option>
+                        <option value="GA" data-response="84">Gabon</option>
+                        <option value="GM" data-response="85">Gambia</option>
+                        <option value="GE" data-response="86">Georgia</option>
+                        <option value="DE" data-response="87">Germany</option>
+                        <option value="GH" data-response="88">Ghana</option>
+                        <option value="GI">Gibraltar</option>
+                        <option value="GR" data-response="89">Greece</option>
+                        <option value="GL">Greenland</option>
+                        <option value="GD" data-response="90">Grenada</option>
+                        <option value="GP">Guadeloupe</option>
+                        <option value="GU">Guam</option>
+                        <option value="GT" data-response="91">Guatemala</option>
+                        <option value="GN" data-response="92">Guinea</option>
+                        <option value="GW" data-response="93">Guinea-Bissau</option>
+                        <option value="GY" data-response="94">Guyana</option>
+                        <option value="HT" data-response="95">Haiti</option>
+                        <option value="VA">Holy See (Vatican City State)</option>
+                        <option value="HN" data-response="96">Honduras</option>
+                        <option value="HK">Hong Kong</option>
+                        <option value="HU" data-response="97">Hungary</option>
+                        <option value="IS" data-response="98">Iceland</option>
+                        <option value="IN" data-response="99">India</option>
+                        <option value="ID" data-response="100">Indonesia</option>
+                        <option value="IR" data-response="101">Iran</option>
+                        <option value="IQ" data-response="102">Iraq</option>
+                        <option value="IE" data-response="103">Ireland</option>
+                        <option value="IL" data-response="104">Israel</option>
+                        <option value="IT" data-response="105">Italy</option>
+                        <option value="JM" data-response="106">Jamaica</option>
+                        <option value="JP" data-response="107">Japan</option>
+                        <option value="JO" data-response="109">Jordan</option>
+                        <option value="KZ" data-response="110">Kazakhstan</option>
+                        <option value="KE" data-response="111">Kenya</option>
+                        <option value="KI" data-response="112">Kiribati</option>
+                        <option value="KR" data-response="113">South Korea</option>
+                        <option value="XK">Kosovo</option>
+                        <option value="KW" data-response="114">Kuwait</option>
+                        <option value="KG" data-response="115">Kyrgyzstan</option>
+                        <option value="LA" data-response="116">Laos</option>
+                        <option value="LV" data-response="117">Latvia</option>
+                        <option value="LB" data-response="118">Lebanon</option>
+                        <option value="LS" data-response="119">Lesotho</option>
+                        <option value="LR" data-response="122">Liberia</option>
+                        <option value="LI" data-response="124">Liechtenstein</option>
+                        <option value="LT" data-response="125">Lithuania</option>
+                        <option value="LU" data-response="126">Luxembourg</option>
+                        <option value="MO">Macau</option>
+                        <option value="MK">Macedonia</option>
+                        <option value="MG" data-response="127">Madagascar</option>
+                        <option value="MW" data-response="128">Malawi</option>
+                        <option value="MY" data-response="129">Malaysia</option>
+                        <option value="MV" data-response="130">Maldives</option>
+                        <option value="ML" data-response="131">Mali</option>
+                        <option value="MT">Malta</option>
+                        <option value="MH" data-response="133">Marshall Islands</option>
+                        <option value="MQ">Martinique</option>
+                        <option value="MR" data-response="134">Mauritania</option>
+                        <option value="MU" data-response="135">Mauritius</option>
+                        <option value="YT">Mayotte</option>
+                        <option value="MX" data-response="136">Mexico</option>
+                        <option value="FM" data-response="137">Micronesia</option>
+                        <option value="MD" data-response="138">Moldova, Republic of</option>
+                        <option value="MC" data-response="139">Monaco</option>
+                        <option value="MN" data-response="140">Mongolia</option>
+                        <option value="ME" data-response="141">Montenegro</option>
+                        <option value="MS">Montserrat</option>
+                        <option value="MA" data-response="142">Morocco</option>
+                        <option value="MZ" data-response="143">Mozambique</option>
+                        <option value="MM" data-response="144">Myanmar</option>
+                        <option value="NA" data-response="145">Namibia</option>
+                        <option value="NR" data-response="146">Nauru</option>
+                        <option value="NP" data-response="147">Nepal</option>
+                        <option value="NL" data-response="148">Netherlands</option>
+                        <option value="AN">Netherlands Antilles</option>
+                        <option value="NC">New Caledonia</option>
+                        <option value="NZ" data-response="149">New Zealand</option>
+                        <option value="NI" data-response="150">Nicaragua</option>
+                        <option value="NE" data-response="151">Niger</option>
+                        <option value="NG" data-response="152">Nigeria</option>
+                        <option value="NU">Niue</option>
+                        <option value="NF">Norfolk Island</option>
+                        <option value="MP">Northern Mariana Islands</option>
+                        <option value="NO" data-response="153">Norway</option>
+                        <option value="OM" data-response="154">Oman</option>
+                        <option value="PK" data-response="155">Pakistan</option>
+                        <option value="PW">Palau</option>
+                        <option value="PA" data-response="156">Panama</option>
+                        <option value="PG" data-response="157">Papua New Guinea</option>
+                        <option value="PY" data-response="158">Paraguay</option>
+                        <option value="PE" data-response="159">Peru</option>
+                        <option value="PH" data-response="160">Philippines</option>
+                        <option value="PN">Pitcairn Island</option>
+                        <option value="PL" data-response="161">Poland</option>
+                        <option value="PT" data-response="162">Portugal</option>
+                        <option value="PR" data-response="209">Puerto Rico</option>
+                        <option value="QA" data-response="163">Qatar</option>
+                        <option value="RE">Reunion</option>
+                        <option value="RO" data-response="164">Romania</option>
+                        <option value="RU" data-response="165">Russian Federation</option>
+                        <option value="RW" data-response="16">Rwanda</option>
+                        <option value="KN" data-response="167">Saint Kitts and Nevis</option>
+                        <option value="LC" data-response="168">Saint Lucia</option>
+                        <option value="VC" data-response="169">Saint Vincent and the Grenadines</option>
+                        <option value="WS" data-response="170">Samoa</option>
+                        <option value="SM" data-response="171">San Marino</option>
+                        <option value="ST" data-response="172">Sao Tome and Principe</option>
+                        <option value="SA" data-response="173">Saudi Arabia</option>
+                        <option value="SN" data-response="174">Senegal</option>
+                        <option value="RS" data-response="175">Serbia</option>
+                        <option value="SC" data-response="176">Seychelles</option>
+                        <option value="SL" data-response="177">Sierra Leone</option>
+                        <option value="SG" data-response="178">Singapore</option>
+                        <option value="SK" data-response="179">Slovakia</option>
+                        <option value="SI" data-response="180">Slovenia</option>
+                        <option value="SB" data-response="181">Solomon Islands</option>
+                        <option value="SO" data-response="182">Somalia</option>
+                        <option value="ZA" data-response="183">South Africa</option>
+                        <option value="ES" data-response="185">Spain</option>
+                        <option value="LK" data-response="186">Sri Lanka</option>
+                        <option value="SH">St. Helena</option>
+                        <option value="PM">St. Pierre and Miquelon</option>
+                        <option value="SD" data-response="187">Sudan</option>
+                        <option value="SR" data-response="188">Suriname</option>
+                        <option value="SZ" data-response="189">Swaziland</option>
+                        <option value="SE" data-response="190">Sweden</option>
+                        <option value="CH" data-response="191">Switzerland</option>
+                        <option value="SY" data-response="192">Syria</option>
+                        <option value="TW">Taiwan</option>
+                        <option value="TJ" data-response="193">Tajikistan</option>
+                        <option value="TZ" data-response="194">Tanzania</option>
+                        <option value="TH" data-response="195">Thailand</option>
+                        <option value="TG">Togo</option>
+                        <option value="TK">Tokelau</option>
+                        <option value="TO" data-response="199">Tonga</option>
+                        <option value="TT" data-response="200">Trinidad and Tobago</option>
+                        <option value="TN" data-response="201">Tunisia</option>
+                        <option value="TR" data-response="202">Turkey</option>
+                        <option value="TM" data-response="203">Turkmenistan</option>
+                        <option value="TC">Turks and Caicos Islands</option>
+                        <option value="TV" data-response="204">Tuvalu</option>
+                        <option value="UG" data-response="205">Uganda</option>
+                        <option value="UA" data-response="206">Ukraine</option>
+                        <option value="AE" data-response="207">United Arab Emirates</option>
+                        <option value="GB" data-response="208">United Kingdom</option>
+                        <option value="US" data-response="209">United States</option>
+                        <option value="UY" data-response="210">Uruguay</option>
+                        <option value="UZ" data-response="211">Uzbekistan</option>
+                        <option value="VU" data-response="212">Vanuatu</option>
+                        <option value="VE" data-response="213">Venezuela</option>
+                        <option value="VN" data-response="214">Viet Nam</option>
+                        <option value="VI">Virgin Islands (U.S.)</option>
+                        <option value="WF">Wallis and Futuna Islands</option>
+                        <option value="EH">Western Sahara</option>
+                        <option value="YE" data-response="215">Yemen</option>
+                        <option value="ZM"data-response="216">Zambia</option>
+                        <option value="ZW" data-response="217">Zimbabwe</option>
+                    </select>
+                </div>
+                {% comment %}Translators: Email button text{% endcomment %}
+                <button type="submit" class="bebas btn">{% trans "Email Them" %}</button>
+                <div class="organizing">
+                    {% comment %}Translators: Label of "I want to help organize" checkbox{% endcomment %}
+                    <label for="organize"><input type="checkbox" id="organize" name="organizer" value="1"> {% trans "I want to help organize" %}</label>
+                </div>  
+            </form>
+            <p class="disclosure">
+                {% comment %}Translators: Email address usage disclosure{% endcomment %}
+                {% trans "Fight for the Future and Center for Rights (our 501c3)  may contact you about related campaigns." %} 
+                {% comment %}Translators: Privacy policy link text{% endcomment %}
+                <a href="http://fightforthefuture.org/privacy">{% trans "privacy policy" %}</a></p>
+        </div>
+
+        <h2>
+            {% comment %}Translators: Suggestion to join a local action{% endcomment %}
+            {% trans "Join an action in your country." %} 
+            {% comment %}Translators: Link to create a local event{% endcomment %}
+            <a href="">{% trans "Don&#39;t see one? Start one." %}</a></h2>
+
+        <iframe class="mapz" width="850" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=https:%2F%2Fdocs.google.com%2Fa%2Fchuckharmston.com%2Fspreadsheet%2Fpub%3Fkey%3DtFKZDkR-JYrExQ3TtfvHwXg%26single%3Dtrue%26gid%3D0%26output%3Dtxt%26time1%3D4123230&amp;t=m&amp;ie=UTF8&amp;t=m&amp;ll=28.304381,8.085938&amp;spn=107.858955,298.476563&amp;z=2&amp;output=embed"></iframe>
+
+        <div class="wrap">
+            {% comment %}Translators: Appeal to attend an event{% endcomment %}
+            <p class="thoughtful">{% blocktrans %}People all over the world are taking action to stop the ITU. Take action in your country and join a network already set up to do just this. (The Internet Defense League country chapters have organized these actions, join us in your country.) If you don&#39;t see an action, get started here:{% endblocktrans %}</p>
+            <h3>{% trans "Learn More" %}</h3>
+            {% comment %}Translators: Header to a list of countries involved with the ITU{% endcomment %}
+            <h2>{% trans "Who are we talking about?" %}</h2>
+            <ul class="flags">
+                <li class="china">{% trans "China" %}</li>
+                <li class="russia">{% trans "Russia" %}</li>
+                <li class="syria">{% trans "Syria" %}</li>
+                <li class="iran">{% trans "Iran" %}</li>
+            </ul>
+            <h2>{% trans "What is the ITU?" %}</h2>
+            <script type="text/javascript" src="http://s3.amazonaws.com/s3.www.universalsubtitles.org/embed.js">
+                (
+                    {
+                        'video_url': "http://www.youtube.com/watch?v=XzNQarkk95Q",
+                        'video_config': {
+                            'width': 854,
+                            'height': 465
+                        }
+                    }
+                )
+            </script>
+            <ul class="linkage outside">
+                <li class="main">{% trans "Further Reading" %}</li>
+                <li><a href="http://allafrica.com/stories/201210030354.html?page=2" class="wa" target="_blank">{% trans "WallAfrica" %}</a></li>
+                <li><a href="http://www.bangkokpost.com/business/economics/318263/government-slammed-over-internet-treaty" class="bp"  target="_blank">{% trans "Bangkok Post" %}</a></li>
+                <li><a href="http://www.nytimes.com/2012/05/25/opinion/keep-the-internet-open.html?_r=0 " class="nyt" target="_blank">{% trans "The New York Times" %}</a></li>
+                <li><a href="http://www.euroispa.org/news/72-internet-governance-revision-the-itrs" class="ei" target="_blank">{% trans "EuroISPA" %}</a></li>
+                <li><a href="http://online.wsj.com/article/SB10001424052970204792404577229074023195322.html?mod=googlenews_wsj" class="wsj" target="_blank">{% trans "The Wall Street Journal" %}</a></li>
+                <li><a href="http://www.thehindu.com/news/national/excessive-surveillance-content-blocking-key-concerns-before-un-meet-on-net-regulation/article4019808.ece" class="th" target="_blank">{% trans "The Hindu" %}</a></li>      
+                <li><a href="http://www.latimes.com/news/opinion/editorials/la-ed-internet-un-itu-20120722,0,335845.story " class="lat" target="_blank">{% trans "Los Angeles Times" %}</a></li>
+            </ul>
+            <ul class="linkage alt">
+                <li class="main">{% trans "Further Resources" %}</li>
+                <li><a target="_blank" href="https://www.accessnow.org/pages/itu">{% trans "Access ITU Resource Center" %}</a></li>
+                <li><a target="_blank" href="http://www.protectinternetfreedom.net/">{% trans "Statement to Protect Global Internet Freedom" %}</a></li>
+
+                <li><a target="_blank" href="https://www.cdt.org/issue/ITU "><span>{% trans "Center for Democracy and Technology ITU Resource Center" %}</span></a></li>
+                <li><a target="_blank" href="http://wcitleaks.org">{% trans "WCITLeaks" %}</a></li>
+                <li><a target="_blank" href="http://www.internetsociety.org/wcit ">{% trans "Internet Society (ISOC) WCIT page" %}</a></li>
+            </ul>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+        <script type="application/javascript">
+            function getip(json){
+                $('#signup_ip').val(json.ip);
+            }
+            $("#user_agent").val(navigator.userAgent);
+            $('#country').change(function(){
+                if ($(this).find('option:selected').data('response')) {
+                    $('#trigger').val($(this).find('option:selected').data('response'));
+                } else {
+                    $('#trigger').val("209");
+                }
+                alert($('#trigger').val());
+            });
+        </script>
+        <script type="application/javascript" src="http://fftf-ips.heroku.com/?callback=getip"></script>
+        <script src="http://s3.amazonaws.com/fftf.media/img/placeholder.js"></script>
+        <script>
+            $(function() {
+                $('input, textarea').placeholder();
+            }); 
+        </script>
+
+        <div style="clear: left;">
+
+            <h2>Change language:</h2>
+
+            <form action="{% url 'set_language' %}" method="post">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="/" />
+                <select name="language">
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    {% for language in languages %}
+                        <option {% if request.LANGUAGE_CODE == language.code %}selected="selected" {% endif %}value="{{ language.code }}">{{ language.name_local }} ({{ language.code }})</option>
+                    {% endfor %}
+                </select>
+                <input type="submit" value="Go" />
+            </form>
+
+        </div>
+
+        {% comment %}
+            <h2>You are located in:</h2>
+            <p>City: {{ session.city }}</p>
+            <p>Region: {{ session.region_name }}</p>
+            <p>Country: {{ session.country_name }}</p>
+        {% endcomment %}
+
+        <script src="{% static 'js/jquery.js' %}"></script>
+        <script src="{% static 'js/script.js' %}"></script>
+
+    </body>
+
+</html>
