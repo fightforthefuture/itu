@@ -382,35 +382,12 @@
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-        <script src="{% static 'js/script.js' %}"></script>
 
         <script src="http://s3.amazonaws.com/fftf.media/img/placeholder.js"></script>
-        <script>
+        <script src="{% static 'js/script.js' %}"></script>
 		
-        function getip(json){
-            $('#signup_ip').val(json.ip);
-        }
-       
-	   
-	   
-		$(function() {
-			$('input, textarea').placeholder();
-				
-			$("#user_agent").val(navigator.userAgent);
-			$('#country').change(function(){
-				if ($(this).find('option:selected').data('response')) {
-					$('#trigger').val($(this).find('option:selected').data('response'));
-				} else {
-					$('#trigger').val("209");
-				}
-			});
-				
-			$('option').text('{{ session.country_name }}').attr('selected',true);
-		});
-		
-		</script>
         <script type="application/javascript" src="http://fftf-ips.heroku.com/?callback=getip"></script>
-
+		<script>$("select").find("option:contains('{{ session.country_name }}')").attr('selected',true);</script>
         <div style="clear: left;">
 
             <h2>Change language:</h2>
