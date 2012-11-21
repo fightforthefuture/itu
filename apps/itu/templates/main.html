@@ -382,27 +382,34 @@
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
-        <script type="application/javascript">
-            function getip(json){
-                $('#signup_ip').val(json.ip);
-            }
-            $("#user_agent").val(navigator.userAgent);
-            $('#country').change(function(){
-                if ($(this).find('option:selected').data('response')) {
-                    $('#trigger').val($(this).find('option:selected').data('response'));
-                } else {
-                    $('#trigger').val("209");
-                }
-            });
-        </script>
-        <script type="application/javascript" src="http://fftf-ips.heroku.com/?callback=getip"></script>
+        <script src="{% static 'js/script.js' %}"></script>
+
         <script src="http://s3.amazonaws.com/fftf.media/img/placeholder.js"></script>
         <script>
-            $(function() {
-                $('input, textarea').placeholder();
-            }); 
-        </script>
+		
+        function getip(json){
+            $('#signup_ip').val(json.ip);
+        }
+       
+	   
+	   
+		$(function() {
+			$('input, textarea').placeholder();
+				
+			$("#user_agent").val(navigator.userAgent);
+			$('#country').change(function(){
+				if ($(this).find('option:selected').data('response')) {
+					$('#trigger').val($(this).find('option:selected').data('response'));
+				} else {
+					$('#trigger').val("209");
+				}
+			});
+				
+			$('option').text('{{ session.country_name }}').attr('selected',true);
+		});
+		
+		</script>
+        <script type="application/javascript" src="http://fftf-ips.heroku.com/?callback=getip"></script>
 
         <div style="clear: left;">
 
@@ -421,17 +428,13 @@
             </form>
 
         </div>
-
-        {% comment %}
+		{% comment %}
             <h2>You are located in:</h2>
             <p>City: {{ session.city }}</p>
             <p>Region: {{ session.region_name }}</p>
             <p>Country: {{ session.country_name }}</p>
-        {% endcomment %}
-
-        <script src="{% static 'js/jquery.js' %}"></script>
-        <script src="{% static 'js/script.js' %}"></script>
-
+		{% endcomment %}
+       
     </body>
 
 </html>
