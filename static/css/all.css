@@ -326,7 +326,15 @@ ol.todo li {
 	list-style-type: decimal;
 	margin-bottom: 10px;
 	font-size: 115%;
-
 	margin-left: 10px;
-	
+}
+
+#languageselect {
+	float: right;
+	width: 100px;
+	height: 100px;
+	margin-top: 10px;
+	margin-right: 10px;
+	color: #fff;
+	text-align: right;
 }

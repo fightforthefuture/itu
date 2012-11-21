@@ -27,7 +27,20 @@
     </head>
 
     <body role="document">
-		<!-- {% if debug %}awesome{% else %}NOT AWESOME{% endif %}-->
+
+
+	{% if debug %}<form action="{% url 'set_language' %}" method="post" id="languageselect">
+       <h4>Change language:</h4>
+            {% csrf_token %}
+            <input name="next" type="hidden" value="/" />
+            <select name="language">
+                {% get_language_info_list for LANGUAGES as languages %}
+                {% for language in languages %}
+                    <option {% if request.LANGUAGE_CODE == language.code %}selected="selected" {% endif %}value="{{ language.code }}">{{ language.name_local }} ({{ language.code }})</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="Go" />
+        </form>{% endif %}
         <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
         <div class="socialize" style="position: fixed; height: 350px; margin-left: 10px; margin-top: 10px; z-index: 99;">
