@@ -417,6 +417,55 @@ margin-top: 430px;
 background: url('http://internetdefenseleague.org/images/cr_logo.png');
 }
 
+.modal{
+    background: rgba(0, 0, 0, 0.85);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10000;
+    display: none;
+}
+    .modal_content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 670px;
+        height: 370px;
+        background: #FFF;
+        margin: -225px 0 0 -375px;
+        padding: 40px;
+    }
+        .modal_content h2{
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            margin: 0 0 24px;
+        }
+        .modal_content p{
+            margin: 16px 0;
+        }
+        .modal_content .script{
+            margin: 24px 0;
+            background: #EEE;
+            padding: 24px;
+        }
+            .modal_content .script p{
+                margin: 0;
+            }
+    .modal .close{
+        background: url('https://fftforg.heroku.com/images/ctu/confirm_close.png') no-repeat;
+        width: 41px;
+        height: 42px;
+        display: block;
+        text-indent: -999em;
+        overflow: hidden;
+        position: absolute;
+        top: -16px;
+        right: -16px;
+    }
+
 p.btw {clear: both; font-size: 12px; color: #666;}
 
 p.two {margin-top: 100px; margin-bottom: 20px;}

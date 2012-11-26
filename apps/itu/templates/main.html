@@ -224,6 +224,18 @@
 			<p class="btw two">A project of <a href="http://www.fightforthefuture.org/">Fight for the Future</a> and <a href="http://www.thecenterforrights.org/">Center for Rights</a>. No copyright intended.</p>
         </div>
 
+        <div class="modal" id="call_modal">
+            <div class="modal_content">
+                <h2>{% trans "Connecting you with your representative now." %}</h2>
+                <p>{% trans "Grab your phone! It will ring momentarily." %} 1{% trans "We'll be connecting you to a real person. Be polite!" %} {% trans "If you're not sure what to say, here's our suggestion:" %}</p>
+                <div class="script">
+                    <p>{% trans "Hello, I'm calling about the upcoming meetings regarding the International Telecommunication Union. Please do everything you can to make the process open and transparent. And please don't take any action that would give the ITU more power over Internet governance." %}</p>
+                </div>
+                <p>{% trans "How did the call go?" %} <a href="mailto:team+itu@fightforthefuture.org">{% trans "We'd love to hear about it." %}</a></p>
+                <a class="close" href="#">Close</a>
+            </div>
+        </div>
+
         <script src="{% static 'js/jquery.js' %}"></script>
         <script src="//s3.amazonaws.com/fftf.media/img/placeholder.js"></script>
         <script src="{% static 'js/script.js' %}"></script>
@@ -263,6 +275,8 @@
 
             </div>
         {% endcomment %}
+
+        <p style="display: none;">{{ session.country_code }}</p>
 
     </body>
 

@@ -33,6 +33,16 @@
 
     $(function(){
 
+        $('.modal .close').click(function(evt){
+            evt.preventDefault();
+            $(this).closest('.modal').hide();
+        });
+        $(document).keyup(function(evt){
+            if(evt.keyCode == 27){
+                $('.modal').hide();
+            }
+        });
+
         $(document).delegate('#action', 'submit', function(evt){
             evt.preventDefault();
         });
@@ -116,6 +126,7 @@
                     'country': $('[name="Country"]').val()
                 });
                 $button.text('Thanks!');
+                $('#call_modal').show();
             }else{
                 $button.enableButton();
             }
