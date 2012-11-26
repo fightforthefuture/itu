@@ -37,6 +37,4 @@ class MainView(TemplateView):
         context = super(MainView, self).get_context_data(**kwargs)
         context['all_countries'] = ALL_COUNTRIES
         context['autoresponder_ids'] = AUTORESPONDER_IDS
-        import pdb
-        pdb.set_trace()
         return context
