@@ -1,6 +1,10 @@
 from django.conf import settings
 from django.utils.translation import check_for_language
-from django.views.generic.base import RedirectView
+from django.views.generic.base import RedirectView, TemplateView
+
+from django_countries.countries import COUNTRIES as ALL_COUNTRIES
+
+from calltool.choices import AUTORESPONDER_IDS
 
 
 class SetLanguageView(RedirectView):
@@ -24,3 +28,15 @@ class SetLanguageView(RedirectView):
         if not next:
             next = '/'
         return next
+
+
+class MainView(TemplateView):
+    template_name = 'main.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(MainView, self).get_context_data(**kwargs)
+        context['all_countries'] = ALL_COUNTRIES
+        context['autoresponder_ids'] = AUTORESPONDER_IDS
+        import pdb
+        pdb.set_trace()
+        return context

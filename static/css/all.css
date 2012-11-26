@@ -95,10 +95,8 @@ a:hover {
 
 .focus form {
     margin-top: 10px;
-    margin-left: 210px;
+    margin-left: 75px;
 }
-
-#id_phone {display: none;}
 
 .focus input, button {
     display: inline;
@@ -110,6 +108,19 @@ a:hover {
     margin-right: 10px;
 }
 
+.focus input.error{
+    border-color: red;
+    color: red;
+}
+    .focus input.error::-webkit-input-placeholder {
+        color: red;
+    }
+    .focus input.error:-moz-placeholder {
+        color: red;
+    }
+    .focus input.error:-ms-input-placeholder {
+        color: red;
+    }
 
 .focus button {
     cursor: pointer;
@@ -133,9 +144,17 @@ a:hover {
     text-shadow: 0 1px 1px rgba(5,70,42,.75); /* drop shadow */
     
 }
+    .focus button[disabled="disabled"]{
+        cursor: default;
+        background: #999;
+    }
+
+    #button_call{
+        display: none;
+    }
 
 .organizing {
-    margin-right: 240px;
+    margin-right: 72px;
     margin-top: 10px;
     clear: left;
     float: right;
@@ -144,7 +163,7 @@ a:hover {
 .focus select {
     padding: 6px;
     font-size: 16px;
-    width: 169px;
+    width: 145px;
     height: 36px;
     background: transparent;
     display: inline-block;
@@ -166,6 +185,12 @@ a:hover {
     height: 38px;
     float: left;
 }
+    .focus .fauxselect.error{
+        background-image: url(../img/select-error.png);
+    }
+        .focus .fauxselect.error select{
+            color: red;
+        }
 
 .focus p.disclosure {
     font-size: 12px;

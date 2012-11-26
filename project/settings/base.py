@@ -46,6 +46,8 @@ GEOIP_DATA = os.path.join(APP_DIR, 'data', 'GeoLiteCity.dat')
 GEOIP_SESSION_FIELDS = [
     'country_name',
     'region_name',
+    'country_code',
+    'country_code3',
     'city',
 ]
 
@@ -100,5 +102,5 @@ ROOT_URLCONF = 'project.urls'
 INTERNAL_IPS = ('127.0.0.1',)
 
 # Twilio settings
-TWILIO_ACCOUNT = 'AC1b36b0880e7530680b7297fccccdab7e'
+TWILIO_ACCOUNT = 'AC9ed4542184c4556fa9aa9ea75626ef91'
 TWILIO_AUTH_TOKEN = os.environ.get('TWILIO_AUTH_TOKEN')

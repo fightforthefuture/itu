@@ -1,5 +1,7 @@
-from django.conf import settings
 from django.core.urlresolvers import reverse
+from django.http import HttpResponse
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import FormView
 from django.utils.safestring import mark_safe
@@ -21,15 +23,28 @@ class CallInfoView(TemplateView):
 
     def _number(self):
         country = self.kwargs['country'].upper()
-        return PhoneNumber.objects.filter(country=country).order_by('?')[0]
+        return PhoneNumber.objects.filter(country=country).order_by('?')
 
     def _twiml(self):
         phone_number = self._number()
+        if(len(phone_number)):
+            return self._has_contact(phone_number[0])
+        else:
+            return self._no_contact()
+
+    def _has_contact(self, phone_number):
         response = twiml.Response()
         response.say((
             'Connecting you to your ITU representative, %s. Please hold.'
         ) % phone_number.name)
         response.dial(number=phone_number.number)
+        return mark_safe(str(response))
+
+    def _no_contact(self):
+        response = twiml.Response()
+        response.say((
+            'Unfortunately, your country has no ITU representative.'
+        ))
         return mark_safe(str(response))
 
     def render_to_response(self, context, **kwargs):
@@ -42,14 +57,23 @@ class CallInfoView(TemplateView):
 class CallToolView(FormView):
     template_name = 'calltool.html'
     form_class = CallToolForm
-    success_url = '/thanks/'
+
+    def get_success_url(self):
+        form_data = self.get_form_kwargs()['data']
+        return reverse('twiml', kwargs={
+            'country': form_data['country']
+        })
+
+    @method_decorator(csrf_exempt)
+    def dispatch(self, *args, **kwargs):
+        return super(CallToolView, self).dispatch(*args, **kwargs)
 
     def form_valid(self, form):
         form_data = self.get_form_kwargs()['data']
-        call = client.calls.create(
+        client.calls.create(
             to=form_data['number'],
-            from_='6122463812',
-            url='https://itu-staging.herokuapp.com' + reverse('twiml', kwargs={
+            from_='4133972653',
+            url='https://itu-production.herokuapp.com' + reverse('twiml', kwargs={
                 'country': form_data['country']
             }),
             method='GET',
