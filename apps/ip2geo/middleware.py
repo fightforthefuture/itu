@@ -69,6 +69,8 @@ class CityMiddleware(object):
                     ip = '96.41.253.160'
 
                 record = self.gip.record_by_addr(ip)
+                print ip
+                print record
                 for field in settings.GEOIP_SESSION_FIELDS:
                     try:
                         request.session[field] = _(record[field], encoding='iso8859-1', strings_only=False)
