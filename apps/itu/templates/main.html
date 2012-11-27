@@ -227,17 +227,19 @@
         <div class="modal" id="call_modal">
             <div class="modal_content">
                 <h2>{% trans "Connecting you with your representative now." %}</h2>
-                <p>{% trans "Grab your phone! It will ring momentarily." %} {% trans "We'll be connecting you to a real person. Be polite!" %} {% trans "If you're not sure what to say, here's our suggestion:" %}</p>
+                <p>{% trans "Grab your phone, it will ring momentarily." %} {% trans "We'll be connecting you to a real person. Be polite!" %} {% trans "If you're not sure what to say, here's our suggestion:" %}</p>
                 <div class="script">
                     <p>{% trans "Hello, I'm calling about the upcoming meetings regarding the International Telecommunication Union. Please do everything you can to make the process open and transparent. And please don't take any action that would give the ITU more power over Internet governance." %}</p>
                 </div>
-                <p>{% trans "How did the call go?" %} <a href="mailto:team+itu@fightforthefuture.org">{% trans "We'd love to hear about it." %}</a></p>
-                <ul class="soc">
-                    <li class="fb"><a href="http://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwhatistheitu.org">Share on Facebook</a></li>
-                    <li class="tw"><a href="http://twitter.com/share?original_referer=https%3A%2F%2Fwww.whatistheitu.org&source=tweetbutton&text=What%20is%20the%20%23ITU%3F%20What%20does%20it%20mean%20for%20the%20future%20of%20the%20Internet%3F&hashtags=WCIT,ITUVideo">Share on Twitter</a></li>
-                    <li class="g"><a  href="https://plus.google.com/share?url=https://www.whatistheitu.org/" onclick="javascript:window.open(this.href,
-                    '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">Share on Google+</a></li>
-                </ul>
+                <p>{% trans "How did the call go?" %} <a href="mailto:team+itu@fightforthefuture.org">{% trans "We'd love to hear about it." %}</a> </p>
+                <div class="social">
+                    <h4>{% trans "After you call, spread the word!" %}</h4>
+                    <ul class="soc">
+                        <li class="fb"><a href="http://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.internetcoup.org/{{ request.LANGUAGE_CODE }}" target="_blank">Share on Facebook</a></li>
+                        <li class="tw"><a href="http://twitter.com/share?text=The%20ITU%20is%20an%20obscure%20UN%20agency%20that's%20trying%20to%20stage%20an%20internet%20coup!%20Learn%20more%20and%20take%20action%20at%20http%3A%2F%2Fwww.internetcoup.org/{{ request.LANGUAGE_CODE }}" target="_blank">Share on Twitter</a></li>
+                        <li class="g"><a  href="https://plus.google.com/share?url=http://www.internetcoup.org/{{ request.LANGUAGE_CODE }}" target="_blank">Share on Google+</a></li>
+                    </ul>
+                </div>
                 <a class="close" href="#">Close</a>
 
             </div>

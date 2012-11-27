@@ -473,13 +473,23 @@ background: url('http://internetdefenseleague.org/images/cr_logo.png');
             text-align: center;
             margin: 0 0 24px;
         }
+        .modal_content h4{
+            font-size: 16px;
+            font-weight: bold;
+            padding-bottom: 4px;
+        }
+        .modal_content .soc{
+            position: static;
+            float: none;
+            margin: 0;
+        }
         .modal_content p{
             margin: 16px 0;
         }
         .modal_content .script{
-            margin: 24px 0;
+            margin: 18px 0;
             background: #EEE;
-            padding: 24px;
+            padding: 18px;
         }
             .modal_content .script p{
                 margin: 0;
