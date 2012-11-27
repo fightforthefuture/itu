@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-26 10:13-0600\n"
+"POT-Creation-Date: 2012-11-27 11:01-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -116,6 +116,10 @@ msgid ""
 "page</a>"
 msgstr ""
 
+#: templates/main.html:158
+msgid "Translate the video"
+msgstr ""
+
 #. Translators: Appeal to attend an event
 #: templates/main.html:166
 msgid ""
@@ -215,7 +219,7 @@ msgid "Connecting you with your representative now."
 msgstr ""
 
 #: templates/main.html:230
-msgid "Grab your phone! It will ring momentarily."
+msgid "Grab your phone, it will ring momentarily."
 msgstr ""
 
 #: templates/main.html:230
@@ -240,4 +244,8 @@ msgstr ""
 
 #: templates/main.html:234
 msgid "We'd love to hear about it."
+msgstr ""
+
+#: templates/main.html:236
+msgid "After you call, spread the word!"
 msgstr ""
