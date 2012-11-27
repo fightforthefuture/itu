@@ -94,18 +94,18 @@ a:hover {
 }
 
 .focus form {
-    margin-top: 10px;
-    margin-left: 75px;
+    padding: 10px 0 0 70px;
 }
 
-.focus input, button {
-    display: inline;
+.focus input,
+.focus button {
+    display: inline-block;
     float: left;
     border: 1px solid #afafaf; /* stroke */
     background-color: #fff; /* layer fill content */
     font-size: 16px;
     padding: 9px;
-    margin-right: 10px;
+    margin: 0;
 }
 
 .focus input.error{
@@ -124,7 +124,6 @@ a:hover {
 
 .focus button {
     cursor: pointer;
-    margin-left: 10px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px; /* border radius */
@@ -141,23 +140,55 @@ a:hover {
     font-family: "Helvetica";
     font-size: 15px;
     font-weight: bold;
-    text-shadow: 0 1px 1px rgba(5,70,42,.75); /* drop shadow */
-    
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    position: relative;
 }
     .focus button[disabled="disabled"]{
         cursor: default;
         background: #999;
     }
-
+    #button_email{
+        padding-top: 6px;
+    }
+        #button_email:before{
+            content: url(../img/mail.png);
+            position: relative;
+            top: 3px;
+            margin-right: 6px;
+        }
     #button_call{
         display: none;
+        padding-top: 6px;
+        padding-bottom: 10px;
     }
+        #button_call:before{
+            content: url(../img/phone.png);
+            position: relative;
+            top: 3px;
+            left: 1px;
+            margin-right: 5px;
+        }
+
+.focus input[type="text"],
+.focus input[type="tel"],
+.focus input[type="email"]{
+    margin-right: 8px;
+    width: 157px;
+}
+.focus input[type="checkbox"]{
+    position: relative;
+    top: 3px;
+    left: -7px;
+}
+.focus button{
+    margin-left: 8px;
+}
 
 .organizing {
-    margin-right: 72px;
+    margin-left: 6px;
     margin-top: 10px;
     clear: left;
-    float: right;
+    float: left;
 }
 
 .focus select {
@@ -179,7 +210,6 @@ a:hover {
 }
 
 .focus .fauxselect {
-    margin-top: 2px;
     background: url(../img/select.png) no-repeat;
     width: 168px;
     height: 38px;
@@ -474,7 +504,7 @@ ul.soc {clear: both; float: right; margin-top: -40px; margin-right: -12px;}
 ul.soc li {display: inline;}
 li.fb a, li.tw a, li.g a {
 	display: inline-block;
-	height: 30px; 
+	height: 29px; 
 	width: 29px; 
 	background: url(../img/share.png) no-repeat; 
 	text-indent: -9999px;
