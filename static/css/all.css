@@ -523,3 +523,8 @@ li.fb a, li.tw a, li.g a {
 }
 #signupmodal-lightbox ul li.tw a, li.tw a {background-position: -33px 0;}
 #signupmodal-lightbox ul li.g a, li.g a {background-position: -68px 0;}
+
+
+img.teaser {
+	margin-left: 130px;
+}
