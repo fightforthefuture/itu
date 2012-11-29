@@ -405,6 +405,7 @@ ol.todo li {
 	list-style: decimal inside;
 	min-height: 32px;
 	line-height: 2;
+	text-align: left;
 }
 
 h2.moar {
