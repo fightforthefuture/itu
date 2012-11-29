@@ -22,6 +22,8 @@ INSTALLED_APPS = list(INSTALLED_APPS) + [
 
 DOMAIN = 'https://itu-production.herokuapp.com'
 
+DEBUG = True
+
 # Staticfiles settings
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 STATICFILES_STORAGE = DEFAULT_FILE_STORAGE
