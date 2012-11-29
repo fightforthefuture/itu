@@ -73,6 +73,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'ip2geo.middleware.CityMiddleware',
+    'itu.middleware.XsSharing',
 )
 INSTALLED_APPS = (
     'django.contrib.auth',
