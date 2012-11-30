@@ -224,6 +224,26 @@
 			<p class="btw two">A project of <a href="http://www.fightforthefuture.org/">Fight for the Future</a> and <a href="http://www.thecenterforrights.org/">Center for Rights</a>. No copyright intended.</p>
         </div>
 
+
+
+        <div class="modal" id="email_modal">
+            <div class="modal_content">
+                <h2>{% trans "You emailed us." %}</h2>
+                <p>{% trans "Blah blah blah, lorem ipsum, blah blah blah." %}</p>
+                <div class="social">
+                    <h4>{% trans "Now, spread the word!" %}</h4>
+                    <ul class="soc">
+                        <li class="fb"><a href="http://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.internetcoup.org/{{ request.LANGUAGE_CODE }}" target="_blank">Share on Facebook</a></li>
+                        <li class="tw"><a href="http://twitter.com/share?text=The%20ITU%20is%20an%20obscure%20UN%20agency%20that's%20trying%20to%20stage%20an%20internet%20coup!%20Learn%20more%20and%20take%20action%20at%20http%3A%2F%2Fwww.internetcoup.org/{{ request.LANGUAGE_CODE }}" target="_blank">Share on Twitter</a></li>
+                        <li class="g"><a  href="https://plus.google.com/share?url=http://www.internetcoup.org/{{ request.LANGUAGE_CODE }}" target="_blank">Share on Google+</a></li>
+                    </ul>
+                </div>
+                <a class="close" href="#">Close</a>
+
+            </div>
+        </div>
+
+
         <div class="modal" id="call_modal">
             <div class="modal_content">
                 <h2>{% trans "Connecting you with your representative now." %}</h2>

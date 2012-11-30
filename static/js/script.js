@@ -132,6 +132,14 @@
             }
         });
 
+        if(window.location.search.indexOf('email_action') >= 0){
+            $('#email_modal').show();
+        }
+
+        if(window.location.search.indexOf('call_action') >= 0){
+            $('#call_modal').show();
+        }
+
     });
 
 })(jQuery);
