@@ -543,3 +543,7 @@ img.teaser {
     height: 150px;
     margin: -115px 0 0 -215px;
 }
+
+.modal_content ul.soc {padding-left: 20px;}
+.modal_content ul.soc  li { float: none;text-align: center;}
+.modal_content li.fb a,.modal_content  li.tw a,.modal_content  li.g a {float: none;}
