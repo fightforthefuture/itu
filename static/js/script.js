@@ -132,6 +132,10 @@
             }
         });
 
+        if(window.location.search.indexOf('no_country') >= 0){
+            $('#no_country_modal').show();
+        }
+
         if(window.location.search.indexOf('email_action') >= 0){
             $('#email_modal').show();
         }

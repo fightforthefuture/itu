@@ -487,6 +487,9 @@ background: url('http://internetdefenseleague.org/images/cr_logo.png');
         }
         .modal_content p{
             margin: 16px 0;
+            font-size: 14px;
+            line-height: 1.43;
+            font-weight: normal;
         }
         .modal_content .script{
             margin: 18px 0;
@@ -529,4 +532,10 @@ li.fb a, li.tw a, li.g a {
 
 img.teaser {
 	margin-left: 100px;
+}
+
+#no_country_modal .modal_content{
+    width: 350px;
+    height: 150px;
+    margin: -115px 0 0 -215px;
 }
