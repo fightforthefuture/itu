@@ -35,7 +35,7 @@ a:hover {
 }
 
 .header h1 {
-    background: url(../img/h1_background.png) no-repeat;
+    background: url(../img/h1_background.png) no-repeat left;
     font-family: bevan;
     color: #ffd700; /* text color */
     font-family: "Bevan";
