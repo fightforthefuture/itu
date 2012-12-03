@@ -43,6 +43,7 @@ LANGUAGES = (
     ('nl', gettext('Dutch')),
     ('ru', gettext('Russian')),
     ('fr', gettext('French')),
+    ('cs', gettext('Czech')),
 )
 LOCALE_PATHS = (
     os.path.join(APP_DIR, 'apps', 'itu', 'locale',),

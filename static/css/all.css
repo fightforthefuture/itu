@@ -24,8 +24,8 @@ a:hover {
 }
 
 .header {
-    background: url(../img/header_background.png) repeat-x;
-    height: 400px;
+    background: url(../img/header_background.png) repeat-x bottom;
+    padding-bottom: 50px;
 }
 
 .header_wrap {
@@ -41,10 +41,9 @@ a:hover {
     font-family: "Bevan";
     font-size: 35px;
     text-shadow: 0 3px 3px rgba(0,0,0,.25); /* drop shadow */
-    text-indent: 160px;
-    padding: 10px 0;
+    padding: 10px 0 10px 160px;
     margin: 0 auto;
-    width: 800px;
+    width: 640px;
     margin-bottom: 10px;
 }
 
@@ -78,9 +77,10 @@ a:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,.47); /* drop shadow */
     background: url(../img/focus.png);
     width: 930px;
-    height: 240px;
+    min-height: 240px;
     margin: 0 auto;
     margin-top: -40px;
+    padding-bottom: 20px;
 }
 
 .focus p {
@@ -326,6 +326,10 @@ ul.linkage li.main, ul.linkage li a {
     font-weight: bold;
     
 }
+ul.linkage li a{
+    padding: 20px;
+    width: 360px;
+    }
 
 ul.linkage li.main, ul.linkage li.main:hover {
     background: #000;

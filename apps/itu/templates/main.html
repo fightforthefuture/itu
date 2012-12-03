@@ -18,8 +18,10 @@
         <link rel="stylesheet" href="{% static 'css/screen.css' %}" media="screen" />
         <link rel="stylesheet" href="{% static 'css/print.css' %}" media="print" />
 		
-		<meta property="og:title" content="Stop the ITU's Internet Coup - Don't give dictators power over the Net http://internetcoup.org/" />
-		<meta property="og:description" content="On December 3rd, the ITU could give a panel of governments and dictatorships absolute power over the global Internet. Help us stop them." />
+        {% comment %}Translators: Social media sharing text: Title{% endcomment %}
+		<meta property="og:title" content="{% trans "Stop the ITU's Internet Coup - Don't give dictators power over the Net" %} http://internetcoup.org/" />
+        {% comment %}Translators: Social media sharing text: Description{% endcomment %}
+		<meta property="og:description" content="{% trans "On December 3rd, the ITU could give a panel of governments and dictatorships absolute power over the global Internet. Help us stop them." %}" />
 		<meta property="og:image" content="{% static 'img/fb-share.png' %}" />
 		<meta property="og:url" content="http://www.internetcoup.org" />
 		<meta property="og:type" content="article" />
@@ -34,7 +36,7 @@
 	    <a id="cr_tag" href="http://www.thecenterforrights.org"  target="blank"></a>
 		
 	{% if debug %}<form action="{% url 'set_language' %}" method="post" id="languageselect">
-       <h4>Change language:</h4>
+        <h4>{% trans "Change language" %}:</h4>
             {% csrf_token %}
             <input name="next" type="hidden" value="/" />
             <select name="language">
@@ -44,7 +46,7 @@
                 {% endfor %}
             </select>
             <input type="submit" value="Go" />
-			<p class="disclosure"><a href="https://www.transifex.com/projects/p/internetcoup/">Help Translate!</a></p>
+			<p class="disclosure"><a href="https://www.transifex.com/projects/p/internetcoup/">{% trans "Help Translate!" %}</a></p>
         </form>{% endif %}
         <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
@@ -80,12 +82,9 @@
             <div class="header_wrap">
                 {% comment %}Translators: Header{% endcomment %}
                 <h1>{% trans "On Dec 3: Stop the Internet Coup" %}</h1>
-                {% comment %}Translators: Introductory text{% endcomment %}
-                {% blocktrans %}
-                    <p>Think of all the terrible things governments do to the Internet. The US destroyed Megaupload, Russia jailed activists over a YouTube video, and China monitors Internet users' every move-- even hacking activists outside its borders.</p>
-                    <p>Now imagine if a panel of governments, giant corporations, and dictatorships had absolute power over the entire Internet, deciding in secret what you can see &amp; do online.</p>
-                    <p>When the ITU meets December 3rd, they'll decide on this.<br />Only a global outcry can stop it.</p>
-                {% endblocktrans %}
+                <p>{% trans "Think of all the terrible things governments do to the Internet. The US destroyed Megaupload, Russia jailed activists over a YouTube video, and China monitors Internet users' every move-- even hacking activists outside its borders." %}</p>
+                <p>{% trans "Now imagine if a panel of governments, giant corporations, and dictatorships had absolute power over the entire Internet, deciding in secret what you can see &amp; do online." %}</p>
+                <p>{% trans "When the ITU meets December 3rd, they'll decide on this." %}<br />{% trans "Only a global outcry can stop it." %}</p>
                 <div class="superfluous_globe"></div>
             </div>
         </div>
@@ -147,13 +146,13 @@
 			
 			<ol class="todo">
 
-    			<li>&nbsp;&nbsp;&nbsp;Share this page on: <a href='http://facebook.com/sharer/sharer.php?u=http%3A%2F%2Finternetcoup.org'>Facebook</a> / <a href="http://twitter.com/share?original_referer=http%3A%2F%2Fwww.internetcoup.org&source=tweetbutton&text=Stop%20the%20%23ITU's%20Internet%20Coup%20-%20Don't%20give%20dictators%20power%20over%20the%20Net">Twitter</a> / <a href='https://plus.google.com/share?url=https://www.internetcoup.org/'>Google+</a> / <a href="http://www.reddit.com/r/technology/comments/13l6sm/in_10_days_the_itu_could_give_a_panel_of/)">Reddit</a></li>
+    			<li>&nbsp;&nbsp;&nbsp;{% trans "Share this page on" %}: <a href='http://facebook.com/sharer/sharer.php?u=http%3A%2F%2Finternetcoup.org'>Facebook</a> / <a href="http://twitter.com/share?original_referer=http%3A%2F%2Fwww.internetcoup.org&source=tweetbutton&text=Stop%20the%20%23ITU's%20Internet%20Coup%20-%20Don't%20give%20dictators%20power%20over%20the%20Net">Twitter</a> / <a href='https://plus.google.com/share?url=https://www.internetcoup.org/'>Google+</a> / <a href="http://www.reddit.com/r/technology/comments/13l6sm/in_10_days_the_itu_could_give_a_panel_of/)">Reddit</a></li>
 
                 <li>&nbsp;&nbsp;&nbsp;<a href="https://docs.google.com/spreadsheet/viewform?formkey=dDl5NWxTWmhXcjVKbHJpc0VjVFcyNHc6MQ">{% trans "Plan an event in your country" %}</a></li>
 
     			<li>&nbsp;&nbsp;&nbsp;{% trans "Join the <a href='http://internetdefenseleague.org'>Internet Defense League" %}</a></li>
 
-    			<li>&nbsp;&nbsp;&nbsp;{% trans "<a href='https://www.transifex.com/projects/p/internetcoup/'>Translate this page</a>" %}</li>
+    			<li>&nbsp;&nbsp;&nbsp;<a href='https://www.transifex.com/projects/p/internetcoup/'>{% trans "Translate this page" %}</a></li>
 
     			<li>&nbsp;&nbsp;&nbsp;<a href="http://www.universalsubtitles.org/en/videos/YAfuLWFp5zS4/info/how-the-itu-could-put-the-internet-behind-closed-doors/">{% trans "Translate the video" %}</a></li>
 
@@ -193,7 +192,9 @@
 			</ul>
 					
 					
-			<p style="float: left; clear: left;">We made this video with our friends at <a href="http://accessnow.org">Access</a> to make sure everyone knows about the ITU and the threat it poses.</p>
+			<p style="float: left; clear: left;">{% blocktrans %}
+                {{ var2 }}
+            {% endblocktrans %}</p>
 			
 			
 
@@ -221,7 +222,7 @@
             </ul>
 			
 
-			<p class="btw two">A project of <a href="http://www.fightforthefuture.org/">Fight for the Future</a> and <a href="http://www.thecenterforrights.org/">Center for Rights</a>. No copyright intended.</p>
+			<p class="btw two">{% blocktrans %}A project of <a href="http://www.fightforthefuture.org/">Fight for the Future</a> and <a href="http://www.thecenterforrights.org/">Center for Rights</a>. No copyright intended.{% endblocktrans %}</p>
         </div>
 
 
