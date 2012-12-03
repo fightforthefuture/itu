@@ -4,7 +4,7 @@ from django.contrib import admin
 from django.views.generic.base import TemplateView
 
 from calltool.views import CallInfoView, CallToolView
-from itu.views import MainView, SetLanguageView
+from itu.views import MainView, SetLanguageView, IncludeCodeView
 
 
 admin.autodiscover()
@@ -18,5 +18,6 @@ urlpatterns += i18n_patterns('',
     url(r'^calltool/twiml/(?P<country>[^\/]+)/$', CallInfoView.as_view(), name='twiml'),
     url(r'^calltool/$', CallToolView.as_view(), name='calltool'),
     url(r'^thanks/', TemplateView.as_view(template_name='thanks.html'), name='thanks'),
+    url(r'^include/', IncludeCodeView.as_view(), name='include'),
     url(r'^$', MainView.as_view(), name='main'),
 )

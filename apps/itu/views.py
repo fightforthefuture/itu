@@ -38,3 +38,14 @@ class MainView(TemplateView):
         context['all_countries'] = ALL_COUNTRIES
         context['autoresponder_ids'] = AUTORESPONDER_IDS
         return context
+
+
+class IncludeCodeView(TemplateView):
+    template_name = 'test.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(IncludeCodeView, self).get_context_data(**kwargs)
+        context['variant'] = self.request.GET.get('variant', 'banner')
+        if context['variant'] not in ['banner', 'modal']:
+            context['variant'] = 'banner'
+        return context
