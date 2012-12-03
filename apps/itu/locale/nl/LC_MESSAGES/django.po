@@ -1,125 +1,120 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
+# 
+# Translators:
+#   <beverheul@hotmail.com>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Internet coup\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-27 11:02-0600\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2012-11-27 11:01-0600\n"
+"PO-Revision-Date: 2012-12-02 18:23+0000\n"
+"Last-Translator: Bbaass <beverheul@hotmail.com>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/internetcoup/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Translators: Page Title
 #: templates/main.html:14
 msgid "Stop the Internet Coup - don&#39;t give dictators power over the Net"
-msgstr ""
+msgstr "Stop de Internet Coup - geef dictators geen macht over het Net"
 
 #. Translators: Twitter share text
 #: templates/main.html:72
-msgid "Stop the #ITU's Internet Coup - Don't give dictators power over the Net"
-msgstr ""
+msgid ""
+"Stop the #ITU's Internet Coup - Don't give dictators power over the Net"
+msgstr "Stop de Internet Coup van het ITU - geef dictators geen macht over het Net"
 
 #. Translators: Header
 #: templates/main.html:82
 msgid "On Dec 3: Stop the Internet Coup"
-msgstr ""
+msgstr "Op 3 december: Stop de Internet Coup"
 
 #. Translators: Introductory text
 #: templates/main.html:84
 msgid ""
 "\n"
-"                    <p>Think of all the terrible things governments do to "
-"the Internet. The US destroyed Megaupload, Russia jailed activists over a "
-"YouTube video, and China monitors Internet users' every move-- even hacking "
-"activists outside its borders.</p>\n"
-"                    <p>Now imagine if a panel of governments, giant "
-"corporations, and dictatorships had absolute power over the entire Internet, "
-"deciding in secret what you can see &amp; do online.</p>\n"
-"                    <p>When the ITU meets December 3rd, they'll decide on "
-"this.<br />Only a global outcry can stop it.</p>\n"
+"                    <p>Think of all the terrible things governments do to the Internet. The US destroyed Megaupload, Russia jailed activists over a YouTube video, and China monitors Internet users' every move-- even hacking activists outside its borders.</p>\n"
+"                    <p>Now imagine if a panel of governments, giant corporations, and dictatorships had absolute power over the entire Internet, deciding in secret what you can see &amp; do online.</p>\n"
+"                    <p>When the ITU meets December 3rd, they'll decide on this.<br />Only a global outcry can stop it.</p>\n"
 "                "
-msgstr ""
+msgstr "\n⏎ <p>Denk aan alle vreselijke dingen die de overheden het Internet aandoen. De VS haalde Megaupload neer, Rusland stop activisten in de gevangenis vanwege een Youtube video, en China controleerd alles was Internet gebruikers doen-- zelfs het hacken van activisten buiten haar grenzen.</p>⏎ <p>Beeld u nu in dat een panel van overheden, grote corporaties en dictators absolute macht over het gehele Internet hadden, achter gesloten deuren beslissen wat u kunt zien en doen online. Wanneer de ITU bijeenkomt op 3 december, word hierover een besluit genomen. Alleen een wereldwijde schreeuw om aandacht kan dit stoppen.</p>⏎"
 
 #. Translators: Email form introduction
 #: templates/main.html:95
 msgid ""
-"Join us on December 3rd, and tell your leaders right now: &ldquo;I don&#39;t "
-"trust the world&#39;s governments to run the global Internet. Don&#39;t give "
-"the ITU any more power.&rdquo;"
-msgstr ""
+"Join us on December 3rd, and tell your leaders right now: &ldquo;I don&#39;t"
+" trust the world&#39;s governments to run the global Internet. Don&#39;t "
+"give the ITU any more power.&rdquo;"
+msgstr "Doe mee op 3 december, en vertel uw leiders nu meteen: \"Ik vertrouw de overheden van de wereld niet om het Internet te besturen. Geef de ITU niet meer macht.\""
 
 #. Translators: Default country selection text
 #: templates/main.html:109
 msgid "Select Country"
-msgstr ""
+msgstr "Selecteer Land"
 
 #. Translators: Email button text
 #: templates/main.html:118
 msgid "Email Them"
-msgstr ""
+msgstr "Stuur Email"
 
 #: templates/main.html:119
 msgid "Call Them"
-msgstr ""
+msgstr "Begin een telefoongesprek"
 
 #. Translators: Label of "I want to help organize" checkbox
 #: templates/main.html:122
 msgid "I want to help organize"
-msgstr ""
+msgstr "Ik wil helpen organiseren"
 
 #. Translators: Email address usage disclosure
 #: templates/main.html:127
 msgid ""
 "Fight for the Future and Center for Rights (our 501c3)  may contact you "
 "about related campaigns."
-msgstr ""
+msgstr "Fight for the Future en Center for Rights (onze 501c3)  kan contact opnemen over gerelateerde campagnes."
 
 #. Translators: Privacy policy link text
 #: templates/main.html:129
 msgid "privacy policy"
-msgstr ""
+msgstr "privacy beleid"
 
 #. Translators: Suggestion to join a local action
 #: templates/main.html:136
 msgid "Join an action in your country."
-msgstr ""
+msgstr "Neem deel aan een actie in uw land."
 
 #. Translators: Link to create a local event
 #: templates/main.html:138
 msgid "Don&#39;t see one? Start one."
-msgstr ""
+msgstr "Niet gevonden? Begin er een."
 
 #: templates/main.html:146
 msgid "More ways to help"
-msgstr ""
+msgstr "Meer manieren om te helpen"
 
 #: templates/main.html:152
 msgid "Plan an event in your country"
-msgstr ""
+msgstr "Plan een event in uw land."
 
 #: templates/main.html:154
 msgid ""
 "Join the <a href='http://internetdefenseleague.org'>Internet Defense League"
-msgstr ""
+msgstr "Neem deel aan de <a href='http://internetdefenseleague.org'>Internet Defense League"
 
 #: templates/main.html:156
 msgid ""
 "<a href='https://www.transifex.com/projects/p/internetcoup/'>Translate this "
 "page</a>"
-msgstr ""
+msgstr "<a href='https://www.transifex.com/projects/p/internetcoup/'>Vertaal deze pagina</a>"
 
 #: templates/main.html:158
 msgid "Translate the video"
-msgstr ""
+msgstr "Vertaal de video"
 
 #. Translators: Appeal to attend an event
 #: templates/main.html:166
@@ -128,108 +123,108 @@ msgid ""
 "your country and join a network already set up to do just this. (The "
 "Internet Defense League country chapters have organized these actions, join "
 "us in your country.) If you don&#39;t see an action, get started here:"
-msgstr ""
+msgstr "Mensen over de hele wereld ondernemen actie om de ITU te stoppen. Onderneem actie in uw land en neem deel aan een netwerk gemaakt om juist dit te doen. (De Internet Defense League heeft deze acties opgezet, help ons in uw land.) Als u geen actie ziet, start er een hier:"
 
 #: templates/main.html:167
 msgid "Learn More"
-msgstr ""
+msgstr "Kom meer te weten"
 
 #. Translators: Header to a list of countries involved with the ITU
 #: templates/main.html:169
 msgid "Who are we talking about?"
-msgstr ""
+msgstr "Over wie hebben we het?"
 
 #: templates/main.html:171
 msgid "China"
-msgstr ""
+msgstr "China"
 
 #: templates/main.html:172
 msgid "Russia"
-msgstr ""
+msgstr "Rusland"
 
 #: templates/main.html:173
 msgid "Syria"
-msgstr ""
+msgstr "Sirië"
 
 #: templates/main.html:174
 msgid "Iran"
-msgstr ""
+msgstr "Iran"
 
 #: templates/main.html:176
 msgid "What is the ITU?"
-msgstr ""
+msgstr "Wat is de ITU?"
 
 #: templates/main.html:204
 msgid "Further Reading"
-msgstr ""
+msgstr "Lees meer"
 
 #: templates/main.html:205
 msgid "WallAfrica"
-msgstr ""
+msgstr "allAfrica"
 
 #: templates/main.html:206
 msgid "Bangkok Post"
-msgstr ""
+msgstr "Bangkok Post"
 
 #: templates/main.html:207
 msgid "The New York Times"
-msgstr ""
+msgstr "The New York Times"
 
 #: templates/main.html:208
 msgid "EuroISPA"
-msgstr ""
+msgstr "EuroISPA"
 
 #: templates/main.html:209
 msgid "The Wall Street Journal"
-msgstr ""
+msgstr "The Wall Street Journal"
 
 #: templates/main.html:210
 msgid "The Hindu"
-msgstr ""
+msgstr "The Hindu"
 
 #: templates/main.html:211
 msgid "Los Angeles Times"
-msgstr ""
+msgstr "Los Angeles Times"
 
 #: templates/main.html:214
 msgid "Further Resources"
-msgstr ""
+msgstr "Meer informatie"
 
 #: templates/main.html:215
 msgid "Access ITU Resource Center"
-msgstr ""
+msgstr "Access ITU Resource Center"
 
 #: templates/main.html:216
 msgid "Statement to Protect Global Internet Freedom"
-msgstr ""
+msgstr "Verklaring voor het beschermen van globale Internet Vrijheid"
 
 #: templates/main.html:218
 msgid "Center for Democracy and Technology ITU Resource Center"
-msgstr ""
+msgstr "Centrum voor Democratie en Technologie ITU Informatie Centrum"
 
 #: templates/main.html:219
 msgid "WCITLeaks"
-msgstr ""
+msgstr "WCITLeaks"
 
 #: templates/main.html:220
 msgid "Internet Society (ISOC) WCIT page"
-msgstr ""
+msgstr "Internet Society (ISOC) WCIT page"
 
 #: templates/main.html:229
 msgid "Connecting you with your representative now."
-msgstr ""
+msgstr "U wordt nu verbonden met uw vertegenwoordiger."
 
 #: templates/main.html:230
 msgid "Grab your phone, it will ring momentarily."
-msgstr ""
+msgstr "Pak uw telefoon, hij gaat zo dadelijk over."
 
 #: templates/main.html:230
 msgid "We'll be connecting you to a real person. Be polite!"
-msgstr ""
+msgstr "Wiij verbinden u met een echt persoon. Wees beleefd!"
 
 #: templates/main.html:230
 msgid "If you're not sure what to say, here's our suggestion:"
-msgstr ""
+msgstr "Als u niet zeker weet wat u kunt zeggen, hier is onze suggestie:"
 
 #: templates/main.html:232
 msgid ""
@@ -237,16 +232,16 @@ msgid ""
 "Telecommunication Union. Please do everything you can to make the process "
 "open and transparent. And please don't take any action that would give the "
 "ITU more power over Internet governance."
-msgstr ""
+msgstr "Hallo, ik bel u over de aankomende bijeenkomsten betreffende de International Telecommunication Union. Alstublieft, doe alles wat u kunt om het proces open en transparant te maken. En neem alstublieft geen actie die de ITU meer macht geeft over het bestuur voor het Internet."
 
 #: templates/main.html:234
 msgid "How did the call go?"
-msgstr ""
+msgstr "Hoe ging het gesprek?"
 
 #: templates/main.html:234
 msgid "We'd love to hear about it."
-msgstr ""
+msgstr "We horen er graag meer over."
 
 #: templates/main.html:236
 msgid "After you call, spread the word!"
-msgstr ""
+msgstr "Na het gesprek, zegt het voort!"

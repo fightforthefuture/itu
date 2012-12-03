@@ -1,26 +1,28 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
+# 
+# Translators:
+#   <jan.jedl@seznam.cz>, 2012.
+#   <ondpek@gmail.com>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Internet coup\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-12-03 02:56-0600\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2012-12-03 08:59+0000\n"
+"Last-Translator: Holmes Wilson <hwilson@gmail.com>\n"
+"Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/internetcoup/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: cs_CZ\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #. Translators: Page Title
 #: templates/main.html:14
 msgid "Stop the Internet Coup - don&#39;t give dictators power over the Net"
-msgstr ""
+msgstr "Zastavme Útok na Internet: nedávejme diktátorům moc nad Sítí"
 
 #. Translators: Social media sharing text: Title
 #: templates/main.html:22
@@ -30,8 +32,8 @@ msgstr ""
 #. Translators: Social media sharing text: Description
 #: templates/main.html:24
 msgid ""
-"On December 3rd, the ITU could give a panel of governments and dictatorships "
-"absolute power over the global Internet. Help us stop them."
+"On December 3rd, the ITU could give a panel of governments and dictatorships"
+" absolute power over the global Internet. Help us stop them."
 msgstr ""
 
 #: templates/main.html:39
@@ -44,13 +46,14 @@ msgstr ""
 
 #. Translators: Twitter share text
 #: templates/main.html:74
-msgid "Stop the #ITU's Internet Coup - Don't give dictators power over the Net"
-msgstr ""
+msgid ""
+"Stop the #ITU's Internet Coup - Don't give dictators power over the Net"
+msgstr "Zastavme Útok na Internet od ITU: nedávejme diktátorům moc nad Sítí"
 
 #. Translators: Header
 #: templates/main.html:84
 msgid "On Dec 3: Stop the Internet Coup"
-msgstr ""
+msgstr "3. prosince: zastavme Útok na Internet"
 
 #: templates/main.html:85
 msgid ""
@@ -62,9 +65,9 @@ msgstr ""
 
 #: templates/main.html:86
 msgid ""
-"Now imagine if a panel of governments, giant corporations, and dictatorships "
-"had absolute power over the entire Internet, deciding in secret what you can "
-"see &amp; do online."
+"Now imagine if a panel of governments, giant corporations, and dictatorships"
+" had absolute power over the entire Internet, deciding in secret what you "
+"can see &amp; do online."
 msgstr ""
 
 #: templates/main.html:87
@@ -78,45 +81,45 @@ msgstr ""
 #. Translators: Email form introduction
 #: templates/main.html:94
 msgid ""
-"Join us on December 3rd, and tell your leaders right now: &ldquo;I don&#39;t "
-"trust the world&#39;s governments to run the global Internet. Don&#39;t give "
-"the ITU any more power.&rdquo;"
-msgstr ""
+"Join us on December 3rd, and tell your leaders right now: &ldquo;I don&#39;t"
+" trust the world&#39;s governments to run the global Internet. Don&#39;t "
+"give the ITU any more power.&rdquo;"
+msgstr "Připoj se k nám 3. prosince a řekni svým vůdcům právě teď: &ldquo;Nevěřím světovým vládám při spravování Internetu. Nedávejte Mezinárodní Telekomunikační Unii (ITU) žádnou další moc.&rdquo;"
 
 #. Translators: Default country selection text
 #: templates/main.html:108
 msgid "Select Country"
-msgstr ""
+msgstr "Vyberte Vaši zemi"
 
 #. Translators: Email button text
 #: templates/main.html:117
 msgid "Email Them"
-msgstr ""
+msgstr "Napište jim"
 
 #: templates/main.html:118
 msgid "Call Them"
-msgstr ""
+msgstr "Zavolejte jim"
 
 #. Translators: Label of "I want to help organize" checkbox
 #: templates/main.html:121
 msgid "I want to help organize"
-msgstr ""
+msgstr "Rád bych pomohl s organizací"
 
 #. Translators: Email address usage disclosure
 #: templates/main.html:126
 msgid ""
 "Fight for the Future and Center for Rights (our 501c3)  may contact you "
 "about related campaigns."
-msgstr ""
+msgstr "Nezisková organizace Fight for the Future and Center for Rights Vás může v budoucnu kontaktovat s informacemi o podobných kampaních."
 
 #. Translators: Privacy policy link text
 #: templates/main.html:128
 msgid "privacy policy"
-msgstr ""
+msgstr "zásady ochrany osobních údajů"
 
 #: templates/main.html:145
 msgid "More ways to help"
-msgstr ""
+msgstr "Další způsoby jak můžete pomoci"
 
 #: templates/main.html:149
 msgid "Share this page on"
@@ -124,12 +127,12 @@ msgstr ""
 
 #: templates/main.html:151
 msgid "Plan an event in your country"
-msgstr ""
+msgstr "Zorganizujte akci ve Vaší zemi"
 
 #: templates/main.html:153
 msgid ""
 "Join the <a href='http://internetdefenseleague.org'>Internet Defense League"
-msgstr ""
+msgstr "Připojte se k  <a href='http://internetdefenseleague.org'>Lize za obranu internetu"
 
 #: templates/main.html:155
 msgid "Translate this page"
@@ -137,7 +140,7 @@ msgstr ""
 
 #: templates/main.html:157
 msgid "Translate the video"
-msgstr ""
+msgstr "Přeložte toto video"
 
 #. Translators: Appeal to attend an event
 #: templates/main.html:165
@@ -146,36 +149,36 @@ msgid ""
 "your country and join a network already set up to do just this. (The "
 "Internet Defense League country chapters have organized these actions, join "
 "us in your country.) If you don&#39;t see an action, get started here:"
-msgstr ""
+msgstr "Lidé na celém světě pořádají akce, aby zastavili ITU. Zúčastni se akce ve svojí zemi a připoj se k síti, která je právě k tomu určená. (The Internet Defense League - Liga na obranu Internetu - místní skupiny organizovali tyto akce, připoj se k nám ve tvé zemi.) Pokud akci nevidíš, začni zde:  "
 
 #: templates/main.html:166
 msgid "Learn More"
-msgstr ""
+msgstr "Zjistěte více"
 
 #. Translators: Header to a list of countries involved with the ITU
 #: templates/main.html:168
 msgid "Who are we talking about?"
-msgstr ""
+msgstr "O kom mluvíme ?"
 
 #: templates/main.html:170
 msgid "China"
-msgstr ""
+msgstr "Čína"
 
 #: templates/main.html:171
 msgid "Russia"
-msgstr ""
+msgstr "Rusko"
 
 #: templates/main.html:172
 msgid "Syria"
-msgstr ""
+msgstr "Sýrie"
 
 #: templates/main.html:173
 msgid "Iran"
-msgstr ""
+msgstr "Írán"
 
 #: templates/main.html:175
 msgid "What is the ITU?"
-msgstr ""
+msgstr "Co je to ITU ?"
 
 #: templates/main.html:195
 #, python-format
@@ -187,59 +190,59 @@ msgstr ""
 
 #: templates/main.html:205
 msgid "Further Reading"
-msgstr ""
+msgstr "Další materiál ke čtení"
 
 #: templates/main.html:206
 msgid "WallAfrica"
-msgstr ""
+msgstr "WallAfrica"
 
 #: templates/main.html:207
 msgid "Bangkok Post"
-msgstr ""
+msgstr "Bangkok Post"
 
 #: templates/main.html:208
 msgid "The New York Times"
-msgstr ""
+msgstr "The New York Times"
 
 #: templates/main.html:209
 msgid "EuroISPA"
-msgstr ""
+msgstr "EuroISPA"
 
 #: templates/main.html:210
 msgid "The Wall Street Journal"
-msgstr ""
+msgstr "The Wall Street Journal"
 
 #: templates/main.html:211
 msgid "The Hindu"
-msgstr ""
+msgstr "The Hindu"
 
 #: templates/main.html:212
 msgid "Los Angeles Times"
-msgstr ""
+msgstr "Los Angeles Times"
 
 #: templates/main.html:215
 msgid "Further Resources"
-msgstr ""
+msgstr "Další zdroje"
 
 #: templates/main.html:216
 msgid "Access ITU Resource Center"
-msgstr ""
+msgstr "Přístup do informačního centra ITU."
 
 #: templates/main.html:217
 msgid "Statement to Protect Global Internet Freedom"
-msgstr ""
+msgstr "Prohlášení na ochranu globální internetové svobody "
 
 #: templates/main.html:219
 msgid "Center for Democracy and Technology ITU Resource Center"
-msgstr ""
+msgstr "Centrum pro demokracii a ITU informační centrum"
 
 #: templates/main.html:220
 msgid "WCITLeaks"
-msgstr ""
+msgstr "WCITLeaks"
 
 #: templates/main.html:221
 msgid "Internet Society (ISOC) WCIT page"
-msgstr ""
+msgstr "Stránka Internet Society (ISOC) WCIT"
 
 #: templates/main.html:225
 msgid ""
@@ -262,19 +265,19 @@ msgstr ""
 
 #: templates/main.html:249
 msgid "Connecting you with your representative now."
-msgstr ""
+msgstr "Spojení s Vaším zástupcem právě probíhá."
 
 #: templates/main.html:250
 msgid "Grab your phone, it will ring momentarily."
-msgstr ""
+msgstr "Vezmi si svůj telefon, bude zvonit krátce."
 
 #: templates/main.html:250
 msgid "We'll be connecting you to a real person. Be polite!"
-msgstr ""
+msgstr "Budete spojeni s reálnou osobou. Buďte prosím slušní."
 
 #: templates/main.html:250
 msgid "If you're not sure what to say, here's our suggestion:"
-msgstr ""
+msgstr "V případě že si nejste jisti co říci máme pro vás pár návrhů:"
 
 #: templates/main.html:252
 msgid ""
@@ -282,19 +285,19 @@ msgid ""
 "Telecommunication Union. Please do everything you can to make the process "
 "open and transparent. And please don't take any action that would give the "
 "ITU more power over Internet governance."
-msgstr ""
+msgstr "Dobrý den, volám kvůli nadcházející konferenci Mezinárodní telekomunikační unie. Prosím udělejte cokoliv můžete, aby byl proces transparentní a otevřený. A prosím nedělejte nic, co by mohlo dát ITU větší moc při spravování Internetu."
 
 #: templates/main.html:254
 msgid "How did the call go?"
-msgstr ""
+msgstr "Jak probíhal Váš telefonát ?"
 
 #: templates/main.html:254
 msgid "We'd love to hear about it."
-msgstr ""
+msgstr "Rádi bychom o tom slyšeli."
 
 #: templates/main.html:256
 msgid "After you call, spread the word!"
-msgstr ""
+msgstr "Sdělte nám, jak probíhal hovor."
 
 #: templates/main.html:271
 msgid "Uh oh!"

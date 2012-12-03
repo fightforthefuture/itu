@@ -35,7 +35,7 @@
 	    <a id="tag" href="http://fightforthefuture.org"  target="blank"></a>
 	    <a id="cr_tag" href="http://www.thecenterforrights.org"  target="blank"></a>
 		
-	{% if debug %}<form action="{% url 'set_language' %}" method="post" id="languageselect">
+	<form action="{% url 'set_language' %}" method="post" id="languageselect">
         <h4>{% trans "Change language" %}:</h4>
             {% csrf_token %}
             <input name="next" type="hidden" value="/" />
@@ -47,7 +47,7 @@
             </select>
             <input type="submit" value="Go" />
 			<p class="disclosure"><a href="https://www.transifex.com/projects/p/internetcoup/">{% trans "Help Translate!" %}</a></p>
-        </form>{% endif %}
+        </form>
         <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
         <div class="socialize" style="position: fixed; height: 350px; margin-left: 10px; margin-top: 10px; z-index: 99;">
