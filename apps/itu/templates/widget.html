@@ -1,0 +1,72 @@
+{% load getattribute %}
+{% load i18n %}
+{% load static %}
+{% load url from future %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+		<script src="//cdn.optimizely.com/js/21249520.js"></script>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=320" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        {% comment %}Translators: Page Title{% endcomment %}
+        <title>{% trans "Stop the Internet Coup - don&#39;t give dictators power over the Net" %}</title>
+        <link rel="icon" type="image/png" href="http://fightforthefuture.org/fav.png" />
+        <link rel="stylesheet" href="{% static 'css/reset.css' %}" media="all" />
+        <link rel="stylesheet" href="{% static 'css/all.css' %}" media="all" />
+        <link rel="stylesheet" href="{% static 'css/screen.css' %}" media="screen" />
+        <link rel="stylesheet" href="{% static 'css/print.css' %}" media="print" />
+		
+        {% comment %}Translators: Social media sharing text: Title{% endcomment %}
+		<meta property="og:title" content="{% trans "Stop the ITU's Internet Coup - Don't give dictators power over the Net" %} http://internetcoup.org/" />
+        {% comment %}Translators: Social media sharing text: Description{% endcomment %}
+		<meta property="og:description" content="{% trans "On December 3rd, the ITU could give a panel of governments and dictatorships absolute power over the global Internet. Help us stop them." %}" />
+		<meta property="og:image" content="{% static 'img/fb-share.png' %}" />
+		<meta property="og:url" content="http://www.internetcoup.org" />
+		<meta property="og:type" content="article" />
+		<meta property="fb:admins" content="678090273"/>
+		
+		
+    </head>
+
+    <body role="document" id="widget">
+
+	    <a id="tag" href="http://fightforthefuture.org"  target="blank"></a>
+	    <a id="cr_tag" href="http://www.thecenterforrights.org"  target="blank"></a>
+		
+        <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+        <div class="header">
+            <div class="header_wrap">
+                {% comment %}Translators: Header{% endcomment %}
+                <h1>{% trans "On Your Site: Stop the Internet Coup" %}</h1>
+                <p>{% trans "Rally your website's users against the ITU's absolute power over the entire Internet by adding our widget to your website." %}</p>
+            </div>
+        </div>
+
+        <div class="focus">
+            <div class="variants">
+                <div class="variant">
+                    <h2>Modal Window</h2>
+                    <img src="{% static 'img/widget/modal.png' %}" />
+                    <textarea>&lt;script src="https://s3.amazonaws.com/fftf.itu/include/modal.js" type="text/javascript" async defer&gt;&lt;/script&gt;</textarea>  
+                </div>
+                <div class="variant">
+                    <h2>Banner</h2>
+                    <img src="{% static 'img/widget/banner.png' %}" />
+                    <textarea>&lt;script src="https://s3.amazonaws.com/fftf.itu/include/banner.js" type="text/javascript" async defer&gt;&lt;/script&gt;</textarea>  
+                </div>
+            </div>
+            <p style="clear: both;">Add immediately before your page&#39;s <span style="font-family: monospace;">&lt;/body&gt;</span> tag.</p>
+        </div>
+
+        <p class="btw two">A project of <a href="http://www.fightforthefuture.org/">Fight for the Future</a> and <a href="http://www.thecenterforrights.org/">Center for Rights</a>. No copyright intended.</p>
+
+        <script src="{% static 'js/jquery.js' %}"></script>
+        <script src="//s3.amazonaws.com/fftf.media/img/placeholder.js"></script>
+        <script src="{% static 'js/script.js' %}"></script>
+
+    </body>
+
+</html>

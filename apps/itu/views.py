@@ -40,12 +40,5 @@ class MainView(TemplateView):
         return context
 
 
-class IncludeCodeView(TemplateView):
-    template_name = 'test.html'
-
-    def get_context_data(self, **kwargs):
-        context = super(IncludeCodeView, self).get_context_data(**kwargs)
-        context['variant'] = self.request.GET.get('variant', 'banner')
-        if context['variant'] not in ['banner', 'modal']:
-            context['variant'] = 'banner'
-        return context
+class WidgetView(TemplateView):
+    template_name = 'widget.html'

@@ -547,3 +547,34 @@ img.teaser {
 .modal_content ul.soc {padding-left: 20px;}
 .modal_content ul.soc  li { float: none;text-align: center;}
 .modal_content li.fb a,.modal_content  li.tw a,.modal_content  li.g a {float: none;}
+
+.variants{
+    width: 622px;
+    margin: 0 auto;
+}
+.variant{
+    width: 261px;
+    float: left;
+    margin: 0 25px;
+}
+    .variant h2{
+        margin: 30px 0 10px;
+
+    }
+    .variant textarea{
+        border: 0;
+        width: 241px;
+        background: #FFF;
+        font: 12px/1.42 monospace;
+        color: #444;
+        padding: 10px;
+        height: 85px;
+        outline: 0;
+    }
+
+#widget .btw{
+    text-align: center;
+}
+#widget .header h1{
+    font-size: 30px;
+}

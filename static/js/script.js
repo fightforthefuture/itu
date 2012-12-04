@@ -33,6 +33,17 @@
 
     $(function(){
 
+        console.log('focusing');
+        $('.variant textarea').bind('focus', function(evt){
+            console.log('focus');
+            var $textarea = $(this);
+            $textarea.select();
+            $textarea.mouseup(function(){
+                $textarea.unbind("mouseup");
+                return false;
+            });
+        });
+
         $('.modal .close').click(function(evt){
             evt.preventDefault();
             $(this).closest('.modal').hide();
