@@ -54,52 +54,52 @@
             }
         });
 
-        $(document).delegate('#action', 'submit', function(evt){
+        $(document).delegate('#button_call', 'submit', function(evt){
             evt.preventDefault();
         });
 
-        $(document).delegate('#button_email', 'click', function(evt){
-            evt.preventDefault();
-            var $button = $(this),
-                $email = $('#id_email'),
-                hasError = false;
-
-            if($button.is(':disabled')){
-                return;
-            }
-
-            $button.disableButton();
-
-            // Require email address
-            if(!$email.val()){
-                $email.addClass('error');
-                hasError = true;
-            }else{
-                $email.removeClass('error');
-            }
-
-            if(!hasError){
-                var responder = $('[name="Country"]').find('option:selected').attr('data-response') || 219;
-                $.get('https://nt.salsalabs.com/save', {
-                    'object': $('[name="object"]').val(),
-                    'tag': $('[name="tag"]').val(),
-                    'ip': $('[name="ip"]').val(),
-                    'user_agent': $('[user_agent="object"]').val(),
-                    'email_trigger_KEYS': responder,
-                    'organization_KEY': $('[name="organization_KEY"]').val(),
-                    'redirect': $('[name="redirect"]').val(),
-                    'Email': $('[name="Email"]').val(),
-                    'Phone': $('[name="Phone"]').val(),
-                    'Country': $('[name="Country"]').val(),
-                    'organizer': $('[name="organizer"]').val()
-                });
-                $button.text('Thanks!');
-            }else{
-                $button.enableButton();
-            }
-
-
-        });
+        // $(document).delegate('#button_email', 'click', function(evt){
+        //     evt.preventDefault();
+        //     var $button = $(this),
+        //         $email = $('#id_email'),
+        //         hasError = false;
+        // 
+        //     if($button.is(':disabled')){
+        //         return;
+        //     }
+        // 
+        //     $button.disableButton();
+        // 
+        //     // Require email address
+        //     if(!$email.val()){
+        //         $email.addClass('error');
+        //         hasError = true;
+        //     }else{
+        //         $email.removeClass('error');
+        //     }
+        // 
+        //     if(!hasError){
+        //         var responder = $('[name="Country"]').find('option:selected').attr('data-response') || 219;
+        //         $.get('https://nt.salsalabs.com/save', {
+        //             'object': $('[name="object"]').val(),
+        //             'tag': $('[name="tag"]').val(),
+        //             'ip': $('[name="ip"]').val(),
+        //             'user_agent': $('[user_agent="object"]').val(),
+        //             'email_trigger_KEYS': responder,
+        //             'organization_KEY': $('[name="organization_KEY"]').val(),
+        //             'redirect': $('[name="redirect"]').val(),
+        //             'Email': $('[name="Email"]').val(),
+        //             'Phone': $('[name="Phone"]').val(),
+        //             'Country': $('[name="Country"]').val(),
+        //             'organizer': $('[name="organizer"]').val()
+        //         });
+        //         $button.text('Thanks!');
+        //     }else{
+        //         $button.enableButton();
+        //     }
+        // 
+        // 
+        // });
 
         $('#button_call').show();
         $(document).delegate('#button_call', 'click', function(evt){
@@ -156,5 +156,15 @@
         }
 
     });
+	// update trigger based on country selected
+	
+	$('#country').change(function(){
+		if ($(this).find('option:selected').data('response')) {
+			$('#trigger').val($(this).find('option:selected').data('response'));
+		} else {
+			$('#trigger').val("209");
+		}
+
+	});
 
 })(jQuery);
